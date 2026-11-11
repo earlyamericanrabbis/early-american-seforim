@@ -15,6 +15,25 @@ logo:                     # e.g. /assets/images/logo.png (leave blank for no log
 baseurl: "/early-american-seforim"
 url: ""
 
+# Social media (shown in the header, footer and sign-up bar)
+substack: https://earlyamericanrabbis.substack.com
+social:
+  - name: Substack
+    icon: substack
+    url: https://earlyamericanrabbis.substack.com
+  - name: Instagram
+    icon: instagram
+    url: https://www.instagram.com/earlyamericanrabbis
+  - name: X
+    icon: x
+    url: https://x.com/EarlyUSRabbis
+  - name: Facebook
+    icon: facebook
+    url: https://www.facebook.com/share/19thnakYtH/
+  - name: WhatsApp group
+    icon: whatsapp
+    url: https://chat.whatsapp.com/J9a9XyoUcAzEDhr5dFN88J
+
 markdown: kramdown
 kramdown:
   input: GFM

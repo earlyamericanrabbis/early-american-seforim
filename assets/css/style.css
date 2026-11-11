@@ -303,3 +303,28 @@ figcaption { font-size: .8rem; color: var(--ink-soft); font-style: italic; }
   .rv-head { flex-direction: column; }
   .fact-wide { grid-column: auto; }
 }
+
+/* Social links */
+.social { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.social a { display: inline-flex; align-items: center; gap: .35rem; color: var(--paper); opacity: .85; }
+.social a:hover { opacity: 1; text-decoration: none; }
+.social svg { width: 1.05rem; height: 1.05rem; display: block; }
+.header-right { display: flex; flex-direction: column; align-items: flex-end; gap: .45rem; }
+.site-header .social { gap: .75rem; }
+@media (max-width: 700px) { .header-right { align-items: flex-start; } }
+.footer-follow { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem 1rem; margin-bottom: .6rem; }
+.footer-follow > span { font-weight: 600; color: var(--ink); }
+.social-labels { gap: .4rem 1.1rem; }
+.social-labels a { color: var(--accent); opacity: 1; font-size: .9rem; }
+.social-labels a:hover span { text-decoration: underline; }
+
+/* Substack sign-up bar */
+.signup { background: var(--paper-2); border-top: 4px solid var(--gold); margin-top: 3rem; }
+.signup-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; padding-top: 1.4rem; padding-bottom: 1.4rem; }
+.signup-text { flex: 1 1 22rem; }
+.signup-text h2 { border: 0; margin: 0 0 .2rem; padding: 0; font-size: 1.35rem; }
+.signup-text p { margin: 0; color: var(--ink-soft); font-size: .95rem; }
+.signup-form { display: flex; flex: 1 1 20rem; gap: .5rem; }
+.signup-form input { flex: 1; min-width: 0; font: inherit; font-size: 1rem; padding: .55rem .8rem; border: 2px solid var(--gold); border-radius: 4px; background: #fffaf0; }
+.signup-form .btn { cursor: pointer; font-family: inherit; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

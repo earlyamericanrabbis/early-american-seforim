@@ -1,0 +1,5 @@
+<ul class="social{% if include.labels %} social-labels{% endif %}">
+  {%- for s in site.social %}
+  <li><a href="{{ s.url }}" target="_blank" rel="noopener" title="{{ s.name }}" aria-label="{{ s.name }}">{% include social-icon.html icon=s.icon %}{% if include.labels %}<span>{{ s.name }}</span>{% endif %}</a></li>
+  {%- endfor %}
+</ul>
