@@ -29,6 +29,9 @@ semicha:
 - Rabbi Meir Simcha Cohen, the Ohr Sameach
 - Rabbi Dovid Hirsch Eisenstein
 - Rabbi Shlomo Vilner
+portrait: /assets/images/rabbis/baruch-shapiro.jpg
+sources:
+- 'Photographs: University of Washington Libraries, Special Collections Division'
 status: draft
 sheet_row: 947
 ---

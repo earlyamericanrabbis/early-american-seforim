@@ -24,6 +24,7 @@ yeshivos:
 - Slobadka
 semicha:
 - Rabbi Eliyahu Dov Tumim
+portrait: /assets/images/rabbis/tzvi-hirsch-genss.jpg
 status: draft
 sheet_row: 945
 ---

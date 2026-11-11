@@ -28,6 +28,12 @@ yeshivos:
 - Slonim
 works:
 - Mei Gava
+portrait: /assets/images/rabbis/gedaliah-halpern.jpg
+gallery:
+- image: /assets/images/rabbis/gedaliah-halpern-2.jpg
+  caption: Rabbi Halpern (University of Washington Libraries, Special Collections)
+sources:
+- 'Photographs: University of Washington Libraries, Special Collections Division'
 status: draft
 sheet_row: 946
 ---
