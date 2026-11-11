@@ -12,8 +12,8 @@ states:
 - MD
 - FL
 - NJ
-- WA
 - MO
+- DC
 communities:
 - Yonkers, NY
 - Baltimore, MD

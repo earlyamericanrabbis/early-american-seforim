@@ -9,7 +9,6 @@ yahrzeit_month: Av
 yahrzeit_month_num: 11
 states:
 - DC
-- WA
 communities:
 - Washington, DC
 positions:
