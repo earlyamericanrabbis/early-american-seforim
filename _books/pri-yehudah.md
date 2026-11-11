@@ -9,6 +9,14 @@ editor:
 translator:
 cover:
 status: Published
+# ---- Print edition (Amazon KDP) ----
+in_print: true                    # false = leave it off the Print Editions page
+amazon:                           # paste the Amazon link here
+price:                            # e.g. "$24.99"
+format: Paperback                 # Paperback, Hardcover, ...
+pages:                            # number of pages
+isbn:
+blurb:                            # optional: one or two sentences for the Print Editions page
 ---
 
 This book comprises Biblical and Talmudical Exposition, and Solemn Thoughts based on the Biblical portions read each week and bearing on the actual happenings in the diaspora and in Israel. It should prove useful for rabbi and lecturer as well as for B’nai Torah and scholars.

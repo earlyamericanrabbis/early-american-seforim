@@ -9,6 +9,14 @@ editor: Simon Springer
 translator:
 cover: /assets/images/covers/the-bar-mitzvah-pulpit.jpg
 status: Published
+# ---- Print edition (Amazon KDP) ----
+in_print: true                    # false = leave it off the Print Editions page
+amazon:                           # paste the Amazon link here
+price:                            # e.g. "$24.99"
+format: Paperback                 # Paperback, Hardcover, ...
+pages:                            # number of pages
+isbn:
+blurb:                            # optional: one or two sentences for the Print Editions page
 ---
 
 Volume I of *Kisvei Rav Yeshayahu Glazer*, the collected writings of Rabbi Simon (Yeshayahu) Glazer, edited, annotated and expanded by Simon Springer. A sermonette for a bar mitzvah boy on every parsha of the Torah.

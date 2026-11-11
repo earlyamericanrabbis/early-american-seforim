@@ -9,6 +9,14 @@ editor:
 translator: Abraham Burstein
 cover:
 status: Published
+# ---- Print edition (Amazon KDP) ----
+in_print: true                    # false = leave it off the Print Editions page
+amazon:                           # paste the Amazon link here
+price:                            # e.g. "$24.99"
+format: Paperback                 # Paperback, Hardcover, ...
+pages:                            # number of pages
+isbn:
+blurb:                            # optional: one or two sentences for the Print Editions page
 ---
 
 Sixty discourses on the weekly portions and the Yomim Tovim, first published in Yiddish as *Fun Ebigen Kval*, a series in *The Day*, and translated into English by Abraham Burstein.

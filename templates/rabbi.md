@@ -17,6 +17,7 @@ gallery:                          # more pictures: headstone, shul, documents
   - image: /assets/images/rabbis/firstname-lastname-headstone.jpg
     caption: Headstone, Cemetery Name
 status: draft                     # change to "final" when the biography is verified
+featured: false                   # true = show him large at the top of the home page
 sources:                          # where the biographical facts come from
   - "Obituary, *Newspaper Name*, date"
 ---

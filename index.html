@@ -4,42 +4,106 @@ title: Home
 {%- assign n_rabbis = site.rabbis | size -%}
 {%- assign n_books = site.books | size -%}
 {%- assign n_derashos = site.derashos | size -%}
+{%- assign rabbis_sorted = site.rabbis | sort: "sort_name" -%}
+{%- assign with_portrait = rabbis_sorted | where_exp: "r", "r.portrait" -%}
+{%- assign without_portrait = rabbis_sorted | where_exp: "r", "r.portrait == nil" -%}
+{%- assign featured = rabbis_sorted | where: "featured", true -%}
+
 <section class="hero">
   <h1>{{ site.title }}</h1>
   <p class="lede">{{ site.description }}</p>
+  <p class="hero-actions">
+    <a class="btn" href="#rabbis">Meet the Rabbis</a>
+    <a class="btn btn-outline" href="{{ '/print/' | relative_url }}">Print Editions</a>
+  </p>
 </section>
 
-<section class="ways">
-  <a class="way" href="{{ '/rabbis/' | relative_url }}">
-    <span class="way-title">By Rabbi</span>
-    <span class="way-desc">Biographies, portraits and the seforim of each rabbi</span>
-    <span class="way-count">{{ n_rabbis }} rabbis</span>
+{% if featured.size > 0 %}
+<section class="featured">
+  {% for r in featured %}
+  <a class="featured-card" href="{{ r.url | relative_url }}">
+    <img src="{{ r.portrait | default: '/assets/images/portrait-placeholder.svg' | relative_url }}" alt="Portrait of {{ r.name }}">
+    <span class="fc-body">
+      <span class="eyebrow">Featured</span>
+      <strong class="fc-name">{{ r.name }}</strong>
+      {% if r.hebrew_name %}<span class="he">{{ r.hebrew_name }}</span>{% endif %}
+      {% if r.born or r.died %}<span class="dates">{{ r.born | default: "?" }} – {{ r.died | default: "?" }}</span>{% elsif r.yahrzeit %}<span class="dates">Yahrzeit: {{ r.yahrzeit }}</span>{% endif %}
+      <span class="fc-text">{{ r.content | strip_html | truncatewords: 60 }}</span>
+      <span class="more">Read his biography ›</span>
+    </span>
   </a>
-  <a class="way" href="{{ '/books/' | relative_url }}">
-    <span class="way-title">By Book</span>
-    <span class="way-desc">Read a sefer from cover to cover</span>
-    <span class="way-count">{{ n_books }} books</span>
-  </a>
-  <a class="way" href="{{ '/parshiyos/' | relative_url }}">
-    <span class="way-title">By Parsha</span>
-    <span class="way-desc">Every derasha on this week's parsha, from every rabbi</span>
-    <span class="way-count">54 parshiyos</span>
-  </a>
-  <a class="way" href="{{ '/subjects/' | relative_url }}">
-    <span class="way-title">By Subject</span>
-    <span class="way-desc">Emunah, Shabbos, chinuch, America and more</span>
-    <span class="way-count">&nbsp;</span>
-  </a>
+  {% endfor %}
+</section>
+{% endif %}
+
+<section id="rabbis" class="home-rabbis">
+  <div class="section-head">
+    <h2>The Rabbis</h2>
+    <a href="{{ '/rabbis/' | relative_url }}">All {{ n_rabbis }} rabbis ›</a>
+  </div>
+  <div class="rabbi-grid">
+    {% for r in with_portrait %}{% include rabbi-tile.html rabbi=r %}{% endfor %}
+    {% for r in without_portrait %}{% include rabbi-tile.html rabbi=r %}{% endfor %}
+  </div>
+</section>
+
+{%- assign printed = site.books | where_exp: "b", "b.in_print != false" -%}
+{%- assign ready = printed | where_exp: "b", "b.amazon" | sort: "title" -%}
+{%- assign soon = printed | where_exp: "b", "b.amazon == nil" | sort: "title" -%}
+{%- assign shelf = ready | concat: soon -%}
+<section class="home-print">
+  <div class="section-head">
+    <h2>Print Editions</h2>
+    <a href="{{ '/print/' | relative_url }}">All print editions ›</a>
+  </div>
+  <div class="shelf">
+    {% for b in shelf limit: 6 %}
+    <a class="shelf-book" href="{{ b.url | relative_url }}">
+      {% if b.cover %}<img src="{{ b.cover | relative_url }}" alt="Cover of {{ b.title }}">{% else %}<span class="faux-cover"><span>{{ b.title }}</span></span>{% endif %}
+      <span class="sb-title">{{ b.title }}</span>
+      <span class="sb-status">{% if b.amazon %}Available on Amazon{% else %}Coming soon{% endif %}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="home-library">
+  <div class="section-head">
+    <h2>Read the Library Online</h2>
+    <a href="{{ '/search/' | relative_url }}">Search ›</a>
+  </div>
   {%- assign n_moed = 0 -%}
   {%- for m in site.data.moadim -%}{%- assign c = site.derashos | where: "moed", m.name | size -%}{%- if c > 0 -%}{%- assign n_moed = n_moed | plus: 1 -%}{%- endif -%}{%- endfor -%}
-  <a class="way" href="{{ '/moadim/' | relative_url }}">
-    <span class="way-title">By Moed</span>
-    <span class="way-desc">Rosh Hashana, Yom Kippur, Sukkos, Pesach and every Yom Tov of the year</span>
-    <span class="way-count">{{ n_moed }} moed{% if n_moed != 1 %}im{% endif %} so far</span>
-  </a>
-  <a class="way" href="{{ '/derashos/' | relative_url }}">
-    <span class="way-title">Every Derasha</span>
-    <span class="way-desc">The full list, or search the text</span>
-    <span class="way-count">{{ n_derashos }} derash{% if n_derashos == 1 %}a{% else %}os{% endif %}</span>
-  </a>
+  <div class="ways">
+    <a class="way" href="{{ '/books/' | relative_url }}">
+      <span class="way-title">By Book</span>
+      <span class="way-desc">Read a sefer from cover to cover</span>
+      <span class="way-count">{{ n_books }} books</span>
+    </a>
+    <a class="way" href="{{ '/parshiyos/' | relative_url }}">
+      <span class="way-title">By Parsha</span>
+      <span class="way-desc">Every derasha on this week's parsha, from every rabbi</span>
+      <span class="way-count">54 parshiyos</span>
+    </a>
+    <a class="way" href="{{ '/moadim/' | relative_url }}">
+      <span class="way-title">By Moed</span>
+      <span class="way-desc">Rosh Hashana, Yom Kippur, Sukkos, Pesach and every Yom Tov of the year</span>
+      <span class="way-count">{{ n_moed }} moed{% if n_moed != 1 %}im{% endif %} so far</span>
+    </a>
+    <a class="way" href="{{ '/subjects/' | relative_url }}">
+      <span class="way-title">By Subject</span>
+      <span class="way-desc">Emunah, Teshuvah, Eretz Yisrael, Jewish life in America and more</span>
+      <span class="way-count">&nbsp;</span>
+    </a>
+    <a class="way" href="{{ '/occasions/' | relative_url }}">
+      <span class="way-title">By Occasion</span>
+      <span class="way-desc">Bar mitzvahs, weddings, hespedim, siyumim and more</span>
+      <span class="way-count">&nbsp;</span>
+    </a>
+    <a class="way" href="{{ '/derashos/' | relative_url }}">
+      <span class="way-title">Every Derasha</span>
+      <span class="way-desc">The full list of everything in the library</span>
+      <span class="way-count">{{ n_derashos }} derashos</span>
+    </a>
+  </div>
 </section>

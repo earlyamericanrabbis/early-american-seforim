@@ -6,11 +6,12 @@
 #  then baseurl is "/early-american-seforim".
 # ------------------------------------------------------------
 
-title: Early American Seforim
-tagline: The writings of America's early rabbis, restored and re-published
+title: Early American Rabbis
+tagline: The lives and seforim of America's early rabbis
 description: >-
-  A library of derashos and seforim by early American rabbis — read them
-  as books, or browse by rabbi, subject, parsha, occasion or individual derasha.
+  The rabbis who built Torah life in America: their lives, their communities,
+  and their seforim, restored and re-published in print and online.
+logo:                     # e.g. /assets/images/logo.png (leave blank for no logo)
 baseurl: "/early-american-seforim"
 url: ""
 

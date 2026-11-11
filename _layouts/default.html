@@ -14,16 +14,17 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="{{ '/' | relative_url }}">
-        <span class="brand-title">{{ site.title }}</span>
-        <span class="brand-tag">{{ site.tagline }}</span>
+        {% if site.logo %}<img class="brand-logo" src="{{ site.logo | relative_url }}" alt="">{% endif %}
+        <span class="brand-text"><span class="brand-title">{{ site.title }}</span>
+        <span class="brand-tag">{{ site.tagline }}</span></span>
       </a>
       <nav class="site-nav">
         <a href="{{ '/rabbis/' | relative_url }}">Rabbis</a>
-        <a href="{{ '/books/' | relative_url }}">Books</a>
+        <a href="{{ '/print/' | relative_url }}">Print Editions</a>
+        <a href="{{ '/books/' | relative_url }}">Library</a>
         <a href="{{ '/parshiyos/' | relative_url }}">Parshiyos</a>
-        <a href="{{ '/subjects/' | relative_url }}">Subjects</a>
         <a href="{{ '/moadim/' | relative_url }}">Moadim</a>
-        <a href="{{ '/derashos/' | relative_url }}">Derashos</a>
+        <a href="{{ '/subjects/' | relative_url }}">Subjects</a>
         <a href="{{ '/search/' | relative_url }}">Search</a>
       </nav>
     </div>
@@ -35,7 +36,7 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>{{ site.title }} — an Early American Rabbis project.</p>
+      <p>{{ site.title }} · <a href="{{ '/rabbis/' | relative_url }}">Rabbis</a> · <a href="{{ '/print/' | relative_url }}">Print Editions</a> · <a href="{{ '/books/' | relative_url }}">Library</a> · <a href="{{ '/derashos/' | relative_url }}">Every Derasha</a></p>
     </div>
   </footer>
 </body>

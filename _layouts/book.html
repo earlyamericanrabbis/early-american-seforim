@@ -23,12 +23,45 @@ layout: default
     </div>
   </div>
 
+  {% if page.in_print != false %}
+  <aside class="print-box">
+    <div>
+      <strong>Print edition</strong>
+      <span class="meta">{%- assign parts = "" | split: "" -%}{%- if page.format -%}{%- assign parts = parts | push: page.format -%}{%- endif -%}{%- if page.pages -%}{%- capture pg -%}{{ page.pages }} pages{%- endcapture -%}{%- assign parts = parts | push: pg -%}{%- endif -%}{%- if page.isbn -%}{%- capture ib -%}ISBN {{ page.isbn }}{%- endcapture -%}{%- assign parts = parts | push: ib -%}{%- endif -%}{{ parts | join: " · " }}</span>
+    </div>
+    {% if page.amazon %}
+      <div class="pc-buy">{% if page.price %}<span class="price">{{ page.price }}</span>{% endif %}<a class="btn-buy" href="{{ page.amazon }}" target="_blank" rel="noopener">Buy on Amazon</a></div>
+    {% else %}
+      <span class="soon">Coming soon to Amazon</span>
+    {% endif %}
+  </aside>
+  {% elsif page.print_in %}
+  {%- assign coll = site.books | where: "slug", page.print_in | first -%}
+  {% if coll %}
+  <aside class="print-box">
+    <div><strong>Print edition</strong> <span class="meta">Printed as part of <a href="{{ coll.url | relative_url }}"><em>{{ coll.title }}</em></a></span></div>
+    {% if coll.amazon %}<div class="pc-buy">{% if coll.price %}<span class="price">{{ coll.price }}</span>{% endif %}<a class="btn-buy" href="{{ coll.amazon }}" target="_blank" rel="noopener">Buy on Amazon</a></div>{% else %}<span class="soon">Coming soon to Amazon</span>{% endif %}
+  </aside>
+  {% endif %}
+  {% endif %}
+
   {% unless page.anthology %}
   <section class="prose">
     {{ content }}
   </section>
   {% endunless %}
 
+  {% if page.volumes %}
+  <h2>In this volume</h2>
+  <ol class="toc">
+    {% for s in page.volumes %}
+      {%- assign cb = site.books | where: "slug", s | first -%}
+      {%- assign cn = site.derashos | where: "book", s | size -%}
+      <li><a href="{{ cb.url | relative_url }}"><em>{{ cb.title }}</em></a>{% if cb.subtitle %} <span class="meta">{{ cb.subtitle }}</span>{% endif %}
+        <span class="meta">{% if cn > 0 %}{{ cn }} derashos — read online{% endif %}</span></li>
+    {% endfor %}
+  </ol>
+  {% else %}
   <h2>Contents</h2>
   {% if items.size == 0 %}
     <p class="empty">No derashos have been added to this book yet.</p>
@@ -83,5 +116,6 @@ layout: default
       </section>
       {% endfor %}
     </details>
+  {% endif %}
   {% endif %}
 </article>

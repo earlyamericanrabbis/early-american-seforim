@@ -8,6 +8,9 @@ editor: Simon Springer
 translator:
 cover:
 status: Published
+# ---- Print edition (Amazon KDP) ----
+in_print: false                   # printed as part of the collected volume below
+print_in: kisvei-rav-yeshayahu-glazer
 ---
 
 Volume III of *Kisvei Rav Yeshayahu Glazer*, the collected writings of Rabbi Simon (Yeshayahu) Glazer, edited, annotated and expanded by Simon Springer. Sermons for the Yomim Tovim and for every occasion in the life of a Jew and a community.

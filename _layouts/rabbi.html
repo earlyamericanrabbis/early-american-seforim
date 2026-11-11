@@ -31,6 +31,22 @@ layout: default
     {{ content }}
   </section>
 
+  {%- comment -%} Print editions: his own books, plus anthologies he appears in {%- endcomment -%}
+  {%- assign print_books = site.books | where: "rabbi", page.slug | where_exp: "b", "b.in_print != false" -%}
+  {%- assign anths = site.books | where: "anthology", true | where_exp: "b", "b.in_print != false" -%}
+  {%- for a in anths -%}
+    {%- assign mine = site.derashos | where: "book", a.slug | where: "rabbi", page.slug | size -%}
+    {%- if mine > 0 -%}{%- assign print_books = print_books | push: a -%}{%- endif -%}
+  {%- endfor -%}
+  {% if print_books.size > 0 %}
+  <section class="rabbi-print">
+    <h2>Available in print</h2>
+    <div class="print-list compact">
+      {% for b in print_books %}{% include print-card.html book=b %}{% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
   {% if page.gallery and page.gallery.size > 0 %}
   <section>
     <h2>Pictures</h2>
@@ -67,7 +83,7 @@ layout: default
 
   {% if books.size > 0 or in_anth.size == 0 %}
   <section>
-    <h2>Seforim by {{ page.short_name | default: page.name }}</h2>
+    <h2>Seforim in the online library</h2>
     {% if books.size == 0 %}
       <p class="empty">No books have been added yet.</p>
     {% else %}

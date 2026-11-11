@@ -1,0 +1,27 @@
+{%- comment -%}
+  One print edition. Usage: {% include print-card.html book=b %}
+{%- endcomment -%}
+{%- assign b = include.book -%}
+{%- assign r = nil -%}{%- if b.rabbi -%}{%- assign r = site.rabbis | where: "slug", b.rabbi | first -%}{%- endif -%}
+<article class="print-card">
+  <a class="pc-cover" href="{{ b.url | relative_url }}">
+    {% if b.cover %}<img src="{{ b.cover | relative_url }}" alt="Cover of {{ b.title }}">{% else %}<span class="faux-cover"><span>{{ b.title }}</span></span>{% endif %}
+  </a>
+  <div class="pc-body">
+    <h3><a href="{{ b.url | relative_url }}">{{ b.title }}</a></h3>
+    {% if b.subtitle %}<p class="pc-sub">{{ b.subtitle }}</p>{% endif %}
+    <p class="meta">{% if b.anthology %}Compiled and edited by {{ b.editor }}{% elsif r %}{{ r.name }}{% endif %}</p>
+    {% if b.blurb %}<p class="pc-blurb">{{ b.blurb }}</p>{% endif %}
+    <p class="pc-details">
+      {%- assign parts = "" | split: "" -%}{%- if b.format -%}{%- assign parts = parts | push: b.format -%}{%- endif -%}{%- if b.pages -%}{%- capture pg -%}{{ b.pages }} pages{%- endcapture -%}{%- assign parts = parts | push: pg -%}{%- endif -%}{%- if b.isbn -%}{%- capture ib -%}ISBN {{ b.isbn }}{%- endcapture -%}{%- assign parts = parts | push: ib -%}{%- endif -%}{{ parts | join: " · " }}
+    </p>
+    <div class="pc-buy">
+      {% if b.amazon %}
+        {% if b.price %}<span class="price">{{ b.price }}</span>{% endif %}
+        <a class="btn-buy" href="{{ b.amazon }}" target="_blank" rel="noopener">Buy on Amazon</a>
+      {% else %}
+        <span class="soon">Coming soon to Amazon</span>
+      {% endif %}
+    </div>
+  </div>
+</article>

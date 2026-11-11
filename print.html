@@ -1,0 +1,23 @@
+---
+title: Print Editions
+permalink: /print/
+---
+<h1>Print Editions</h1>
+<p class="lede">Every sefer in the Early American Rabbis series is available in print through Amazon.</p>
+
+{%- assign printed = site.books | where_exp: "b", "b.in_print != false" -%}
+{%- assign ready = printed | where_exp: "b", "b.amazon" | sort: "title" -%}
+{%- assign soon = printed | where_exp: "b", "b.amazon == nil" | sort: "title" -%}
+
+{% if ready.size > 0 %}
+<section class="print-list">
+  {% for b in ready %}{% include print-card.html book=b %}{% endfor %}
+</section>
+{% endif %}
+
+{% if soon.size > 0 %}
+  {% if ready.size > 0 %}<h2>Coming soon</h2>{% endif %}
+  <section class="print-list">
+    {% for b in soon %}{% include print-card.html book=b %}{% endfor %}
+  </section>
+{% endif %}

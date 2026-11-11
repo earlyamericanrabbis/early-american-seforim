@@ -54,6 +54,31 @@ Same steps, in `_rabbis/` or `_books/`, using `templates/rabbi.md` or `templates
 
 Headstone photos, pictures of shuls and documents go under `gallery:`, each with a caption.
 
+## Print editions and Amazon links
+
+Every book's file (in `_books/`) has a **Print edition** section at the top:
+
+```
+in_print: true
+amazon:            ← paste the Amazon link here
+price: "$24.99"
+format: Paperback
+pages: 312
+isbn: 978-...
+blurb: One or two sentences for the Print Editions page.
+```
+
+- When the `amazon:` line is empty, the book shows **Coming soon to Amazon**.
+- When you paste a link there, it shows a **Buy on Amazon** button, on the Print Editions page, on the book's page, and on each rabbi's page under "Available in print".
+- `in_print: false` takes a book off the Print Editions page entirely.
+- For a book cover, upload the image to `assets/images/covers/` and set `cover: /assets/images/covers/the-file-name.jpg`.
+
+*Chazon Yeshayahu* and the *Book of Sermons* point to *Kisvei Rav Yeshayahu Glazer*, since they're printed as part of it. Put the Amazon link on the *Kisvei* file.
+
+## The home page
+
+The home page shows every rabbi with his portrait. To feature a rabbi large at the top, with the start of his biography, add `featured: true` to his file in `_rabbis/`. To add your logo, upload it to `assets/images/` and put its path on the `logo:` line in `_config.yml`.
+
 ## Spelling rules that matter
 
 - **Parsha names** must match the list exactly: Bereishis, Noach, Lech Lecha, Vayeira, Chayei Sarah, Toldos, Vayeitzei, Vayishlach, Vayeishev, Mikeitz, Vayigash, Vayechi, Shemos, Va'eira, Bo, Beshalach, Yisro, Mishpatim, Terumah, Tetzaveh, Ki Sisa, Vayakhel, Pekudei, Vayikra, Tzav, Shemini, Tazria, Metzora, Acharei Mos, Kedoshim, Emor, Behar, Bechukosai, Bamidbar, Nasso, Beha'aloscha, Shelach, Korach, Chukas, Balak, Pinchas, Matos, Masei, Devarim, Va'eschanan, Eikev, Re'eh, Shoftim, Ki Seitzei, Ki Savo, Nitzavim, Vayeilech, Ha'azinu, V'zos HaBerachah. (The list lives in `_data/parshiyos.yml`.)
