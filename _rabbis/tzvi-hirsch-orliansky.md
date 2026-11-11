@@ -18,7 +18,23 @@ positions:
 seforim:
 - Derashos M”Haratzah
 portrait: /assets/images/rabbis/tzvi-hirsch-orliansky.jpg
+born: '1864'
+died: '1940'
+yeshivos:
+- Grodno
+- Bielsk
+- Bocki
+- Swilatz
+semicha:
+- Rav Malkiel Tzvi
+- Rav Meir Yonah
+works:
+- Derashos m'HaRav Tzvi Hirsch Orliansky
+born_year: 1864
+died_year: 1940
+sources:
+- 'Instagram: @earlyamericanrabbis'
 status: draft
 ---
 
-Biography to be written.
+Rabbi Tzvi Hirsch Orliansky (1864–1940), known as the Skidler Maggid, served as Rav in New York and New Jersey. He learned in Grodno, Bielsk, Bocki and Swilatz and received semicha from Rav Malkiel Tzvi and Rav Meir Yonah. He was the mechaber of *Derashos m'HaRav Tzvi Hirsch Orliansky*.

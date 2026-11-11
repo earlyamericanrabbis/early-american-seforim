@@ -16,7 +16,21 @@ positions:
 seforim:
 - Mantel’s Sermons
 portrait: /assets/images/rabbis/yechiel-mantel.jpg
+born: '1880'
+died: '1948'
+yeshivos:
+- Under R' Zev Goldberger, R' Yechezkel Paneth and R' Moshe Shmuel Glasner
+semicha:
+- R' Zvi Kunstlicher
+- R' Shalom Kraus
+works:
+- Vort un Zeit
+- Mantel's Folk Redner
+born_year: 1880
+died_year: 1948
+sources:
+- 'Instagram: @earlyamericanrabbis'
 status: draft
 ---
 
-Biography to be written.
+Rav Yechiel Mantel (1880–1948) was a Rav in East New York. He learned under R' Zev Goldberger, R' Yechezkel Paneth and R' Moshe Shmuel Glasner, and received semicha from R' Zvi Kunstlicher and R' Shalom Kraus. He was the mechaber of *Vort un Zeit* and *Mantel's Folk Redner*.

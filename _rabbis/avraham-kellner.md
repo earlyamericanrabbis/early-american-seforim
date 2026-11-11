@@ -28,7 +28,19 @@ positions:
 seforim:
 - Tomorrow’s Religion
 portrait: /assets/images/rabbis/avraham-kellner.jpg
+born: '1910'
+died: '1965'
+works:
+- With Perfect Faith
+- A Rabbi's Faith
+- Tomorrow's Religion
+- My Pulpit
+- Strangers at the Gate
+born_year: 1910
+died_year: 1965
+sources:
+- 'Instagram: @earlyamericanrabbis'
 status: draft
 ---
 
-Biography to be written.
+Rabbi Avraham Kellner (1910–1965) served in St. Louis, Yonkers, Baltimore, Miami, Albany, Long Branch, Washington, D.C., and Kew Garden Hills. He was the mechaber of *With Perfect Faith*, *A Rabbi's Faith*, *Tomorrow's Religion*, *My Pulpit* and *Strangers at the Gate*.

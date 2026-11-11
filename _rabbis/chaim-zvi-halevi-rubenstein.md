@@ -31,8 +31,11 @@ semicha:
 - Rabbi Naftali Zvi Berlin
 - Rabbi Chaim Soloveitchik
 - and other Lithuanian rabbis
+portrait: /assets/images/rabbis/chaim-zvi-halevi-rubenstein.jpg
+sources:
+- 'Instagram: @earlyamericanrabbis'
 status: draft
 sheet_row: 702
 ---
 
-Biography to be written.
+Rabbi Chaim Tzvi Rubenstein (1872–1944) served as Rav in Chicago and was one of the founders of the Hebrew Theological College (HTC). He learned in Volozhin and received semicha from the Netziv and Rav Chaim Soloveitchik.

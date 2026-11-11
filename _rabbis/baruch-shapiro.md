@@ -32,6 +32,7 @@ semicha:
 portrait: /assets/images/rabbis/baruch-shapiro.jpg
 sources:
 - 'Photographs: University of Washington Libraries, Special Collections Division'
+- 'Instagram: @earlyamericanrabbis'
 gallery:
 - image: /assets/images/rabbis/baruch-shapiro-2.jpg
   caption: Rabbi Shapiro on the street (University of Washington Libraries, Special Collections)
@@ -39,4 +40,4 @@ status: draft
 sheet_row: 947
 ---
 
-Biography to be written.
+Rabbi Baruch Shapiro served as Rav in Seattle, Washington. He learned under the Rogatchover and the Ohr Sameach, and at RIETS, and received semicha from the Rogatchover and the Ohr Sameach.

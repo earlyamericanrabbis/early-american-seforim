@@ -16,7 +16,26 @@ positions:
 seforim:
 - Derashos HaRamah
 portrait: /assets/images/rabbis/moshe-horowitz.jpg
+born: '1871'
+died: '1947'
+yeshivos:
+- Volozhin
+- Mir
+- Koidenov
+semicha:
+- Rav Shimon Ber
+- Rav Yosef Zundel Hutner
+works:
+- Derashos HaRemah
+- Chizyonos HaRemah
+- Hashkafos HaRemah
+- Hagiyonos HaRemah
+- Histaklus HaRemah b'America
+born_year: 1871
+died_year: 1947
+sources:
+- 'Instagram: @earlyamericanrabbis'
 status: draft
 ---
 
-Biography to be written.
+Rabbi Moshe Horowitz (1871–1947) learned in Volozhin, Mir and Koidenov and received semicha from Rav Shimon Ber and Rav Yosef Zundel Hutner. He was the mechaber of *Derashos HaRemah*, *Chizyonos HaRemah*, *Hashkafos HaRemah*, *Hagiyonos HaRemah* and *Histaklus HaRemah b'America*.

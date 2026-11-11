@@ -16,7 +16,22 @@ positions:
 seforim:
 - Ohr HaChagim
 portrait: /assets/images/rabbis/uri-langner.jpg
+born: '1896'
+died: '1970'
+works:
+- Ohr HaMiddos
+- Ohr HaMikra
+- Ohr HaChagim
+- Pisgamei Oraisa
+- Ohr HaAggadah
+- Nechmad u'Naim
+- Ohr HaMitzvos
+- Milin d'Hespeda
+born_year: 1896
+died_year: 1970
+sources:
+- 'Instagram: @earlyamericanrabbis'
 status: draft
 ---
 
-Biography to be written.
+Rabbi Uri Langner, the Kanenitch Rebbe (1896–1970), was the mechaber of *Ohr HaMiddos*, *Ohr HaMikra*, *Ohr HaChagim*, *Pisgamei Oraisa*, *Ohr HaAggadah*, *Nechmad u'Naim*, *Ohr HaMitzvos* and *Milin d'Hespeda*.

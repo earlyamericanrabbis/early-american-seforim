@@ -16,7 +16,13 @@ positions:
 seforim:
 - Otzer Nechmad
 portrait: /assets/images/rabbis/gedaliah-silverstone.jpg
+born: '1871'
+died: '1944'
+born_year: 1871
+died_year: 1944
+sources:
+- 'Instagram: @earlyamericanrabbis'
 status: draft
 ---
 
-Biography to be written.
+Rabbi Gedaliah Silverstone (1871–1944) served as Rav in Washington, D.C. An immense talmid chacham and darshan, he was the mechaber of over 30 seforim, written in Washington, in Belfast, Ireland, and in Russia.

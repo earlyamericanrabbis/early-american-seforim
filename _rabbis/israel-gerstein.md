@@ -22,7 +22,17 @@ positions:
 seforim:
 - Reveille or Taps
 portrait: /assets/images/rabbis/israel-gerstein.jpg
+born: '1914'
+died: '1993'
+yeshivos:
+- HTC (Hebrew Theological College), Chicago
+works:
+- Reveille or Taps
+born_year: 1914
+died_year: 1993
+sources:
+- 'Instagram: @earlyamericanrabbis'
 status: draft
 ---
 
-Biography to be written.
+Rabbi Israel Gerstein (1914–1993) served as Rav in Passaic, Denver, Shreveport, Louisiana, and Chattanooga, Tennessee. He learned at the Hebrew Theological College (HTC) in Chicago and was the mechaber of *Reveille or Taps*.

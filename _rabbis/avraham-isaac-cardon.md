@@ -24,8 +24,13 @@ communities:
 - Cong. Share Torah Anshei Maariv
 yeshivos:
 - Navardok Yeshiva
+positions:
+- Co-founder of HTC (Hebrew Theological College), Chicago
+portrait: /assets/images/rabbis/avraham-isaac-cardon.jpg
+sources:
+- 'Instagram: @earlyamericanrabbis'
 status: draft
 sheet_row: 97
 ---
 
-Biography to be written.
+Rabbi Avraham Yitzchak Cardon (1882–1946) served as Rav in Chicago and was one of the co-founders of the Hebrew Theological College (HTC) in Chicago.

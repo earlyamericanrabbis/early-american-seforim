@@ -16,7 +16,16 @@ positions:
 seforim:
 - Pri Shlomo
 portrait: /assets/images/rabbis/tzvi-hirsch-dachowitz.jpg
+born: '1885'
+died: '1954'
+works:
+- Pri Shlomo
+- Hegyonei v'Sarafi
+born_year: 1885
+died_year: 1954
+sources:
+- 'Instagram: @earlyamericanrabbis'
 status: draft
 ---
 
-Biography to be written.
+Rabbi Tzvi Hirsch Dachowitz (1885–1954) was a Rav in Brooklyn and Vice President of the Agudas HaRabbonim. He was the mechaber of *Pri Shlomo* and *Hegyonei v'Sarafi*, and a prolific contributor to the Jewish journals of his time.
