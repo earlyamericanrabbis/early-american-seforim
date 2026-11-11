@@ -1,0 +1,48 @@
+---
+title: Search
+permalink: /search/
+---
+<h1>Search the Library</h1>
+<input id="q" class="filter" type="search" placeholder="Search the full text in English or Hebrew…" autofocus>
+<p id="status" class="meta"></p>
+<ul id="results" class="dlist"></ul>
+
+<script>
+(function () {
+  var data = [];
+  var q = document.getElementById('q');
+  var out = document.getElementById('results');
+  var status = document.getElementById('status');
+  // Remove Hebrew vowels and cantillation so "בְּרֵאשִׁית" matches "בראשית"
+  function norm(s) { return (s || '').toLowerCase().replace(/[֑-ׇ]/g, ''); }
+  function esc(s) { return (s || '').replace(/[&<>"]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  fetch('{{ "/search.json" | relative_url }}').then(function (r) { return r.json(); }).then(function (json) {
+    data = json.map(function (d) {
+      d._hay = norm([d.title, d.hebrew, d.rabbi, d.book, d.parsha, d.subjects, d.occasion, d.text].join(' '));
+      d._text = norm(d.text);
+      return d;
+    });
+    var initial = new URLSearchParams(location.search).get('q');
+    if (initial) { q.value = initial; run(); }
+  });
+
+  function run() {
+    var terms = norm(q.value).split(/\s+/).filter(Boolean);
+    out.innerHTML = '';
+    if (!terms.length) { status.textContent = ''; return; }
+    var hits = data.filter(function (d) { return terms.every(function (t) { return d._hay.indexOf(t) !== -1; }); });
+    status.textContent = hits.length + ' result' + (hits.length === 1 ? '' : 's');
+    hits.slice(0, 100).forEach(function (d) {
+      var i = d._text.indexOf(terms[0]);
+      var snip = i === -1 ? d.text.slice(0, 180) : '…' + d.text.slice(Math.max(0, i - 80), i + 120) + '…';
+      var li = document.createElement('li');
+      li.innerHTML = '<a class="dtitle" href="' + d.url + '">' + esc(d.title) + '</a>' +
+        '<span class="meta">' + esc(d.rabbi) + ' · <em>' + esc(d.book) + '</em>' + (d.parsha ? ' · ' + esc(d.parsha) : '') + '</span>' +
+        '<span class="snip">' + esc(snip) + '</span>';
+      out.appendChild(li);
+    });
+  }
+  q.addEventListener('input', run);
+})();
+</script>

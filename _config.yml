@@ -1,0 +1,49 @@
+# ------------------------------------------------------------
+#  Early American Seforim — site settings
+#  You rarely need to touch this file.
+#  IMPORTANT: "baseurl" must match the name of your GitHub repository.
+#  If your repository is github.com/yourname/early-american-seforim
+#  then baseurl is "/early-american-seforim".
+# ------------------------------------------------------------
+
+title: Early American Seforim
+tagline: The writings of America's early rabbis, restored and re-published
+description: >-
+  A library of derashos and seforim by early American rabbis — read them
+  as books, or browse by rabbi, subject, parsha, occasion or individual derasha.
+baseurl: "/early-american-seforim"
+url: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+collections:
+  rabbis:
+    output: true
+    permalink: /rabbis/:name/
+  books:
+    output: true
+    permalink: /books/:name/
+  derashos:
+    output: true
+    permalink: /derashos/:path/
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: default }
+  - scope: { path: "", type: rabbis }
+    values: { layout: rabbi }
+  - scope: { path: "", type: books }
+    values: { layout: book }
+  - scope: { path: "", type: derashos }
+    values: { layout: derasha }
+
+exclude:
+  - README.md
+  - HOW-TO-ADD-CONTENT.md
+  - templates
+  - Gemfile
+  - Gemfile.lock
+  - vendor

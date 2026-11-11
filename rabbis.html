@@ -1,0 +1,19 @@
+---
+title: Rabbis
+permalink: /rabbis/
+---
+<h1>The Rabbis</h1>
+<div class="cards">
+{%- assign rabbis = site.rabbis | sort: "sort_name" -%}
+{%- for r in rabbis -%}
+  <a class="card rabbi-card" href="{{ r.url | relative_url }}">
+    <img src="{{ r.portrait | default: '/assets/images/portrait-placeholder.svg' | relative_url }}" alt="">
+    <span class="card-body">
+      <strong>{{ r.name }}</strong>
+      {% if r.hebrew_name %}<span class="he">{{ r.hebrew_name }}</span>{% endif %}
+      {% if r.born or r.died %}<span class="dates">{{ r.born | default: "?" }} – {{ r.died | default: "?" }}</span>{% endif %}
+      {% if r.communities %}<span class="meta">{{ r.communities | join: " · " }}</span>{% endif %}
+    </span>
+  </a>
+{%- endfor -%}
+</div>

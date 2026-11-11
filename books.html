@@ -1,0 +1,21 @@
+---
+title: Books
+permalink: /books/
+---
+<h1>The Seforim</h1>
+<div class="cards">
+{%- assign books = site.books | sort: "title" -%}
+{%- for b in books -%}
+  {%- assign r = site.rabbis | where: "slug", b.rabbi | first -%}
+  {%- assign n = site.derashos | where: "book", b.slug | size -%}
+  <a class="card book-card" href="{{ b.url | relative_url }}">
+    {% if b.cover %}<img src="{{ b.cover | relative_url }}" alt="">{% else %}<span class="faux-cover"><span>{{ b.title }}</span></span>{% endif %}
+    <span class="card-body">
+      <strong><em>{{ b.title }}</em></strong>
+      {% if b.hebrew_title %}<span class="he">{{ b.hebrew_title }}</span>{% endif %}
+      <span class="meta">{{ r.name }}</span>
+      <span class="meta">{{ b.printed }}{% if n > 0 %}{% if b.printed %} · {% endif %}{{ n }} derash{% if n == 1 %}a{% else %}os{% endif %}{% endif %}</span>
+    </span>
+  </a>
+{%- endfor -%}
+</div>

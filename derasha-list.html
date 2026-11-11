@@ -1,0 +1,18 @@
+{%- comment -%}
+  Lists derashos. Usage: {% include derasha-list.html items=some_list show_book=true %}
+{%- endcomment -%}
+<ul class="dlist">
+{%- for d in include.items -%}
+  {%- assign b = site.books | where: "slug", d.book | first -%}
+  {%- assign r_slug = d.rabbi | default: b.rabbi -%}
+  {%- assign r = site.rabbis | where: "slug", r_slug | first -%}
+  <li>
+    <a class="dtitle" href="{{ d.url | relative_url }}">{{ d.title }}</a>
+    {%- if d.hebrew_title %} <span class="he">{{ d.hebrew_title }}</span>{% endif %}
+    <span class="meta">
+      {%- if include.show_book != false -%}{{ r.name }}{% if b %} · <em>{{ b.title }}</em>{% endif %}{%- endif -%}
+      {%- if d.parsha %}{% if include.show_book != false %} · {% endif %}{{ d.parsha | join: ", " }}{% endif -%}
+    </span>
+  </li>
+{%- endfor -%}
+</ul>

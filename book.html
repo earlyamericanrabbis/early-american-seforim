@@ -1,0 +1,50 @@
+---
+layout: default
+---
+{%- assign rabbi = site.rabbis | where: "slug", page.rabbi | first -%}
+{%- assign items = site.derashos | where: "book", page.slug | sort: "order" -%}
+<article class="book">
+  <p class="crumbs"><a href="{{ '/books/' | relative_url }}">Books</a> ›</p>
+
+  <div class="book-head">
+    {% if page.cover %}<img class="cover" src="{{ page.cover | relative_url }}" alt="Cover of {{ page.title }}">{% endif %}
+    <div>
+      {% if rabbi %}<p class="eyebrow"><a href="{{ rabbi.url | relative_url }}">{{ rabbi.name }}</a></p>{% endif %}
+      <h1>{{ page.title }}</h1>
+      {% if page.hebrew_title %}<p class="he big">{{ page.hebrew_title }}</p>{% endif %}
+      <p class="meta">
+        {{ page.printed }}
+        {% if page.editor %} · Edited by {{ page.editor }}{% endif %}
+        {% if page.translator %} · Translated by {{ page.translator }}{% endif %}
+      </p>
+      {% if page.status %}<span class="pill">{{ page.status }}</span>{% endif %}
+    </div>
+  </div>
+
+  <section class="prose">
+    {{ content }}
+  </section>
+
+  <h2>Contents</h2>
+  {% if items.size == 0 %}
+    <p class="empty">No derashos have been added to this book yet.</p>
+  {% else %}
+    <ol class="toc">
+      {% for d in items %}
+      <li><a href="{{ d.url | relative_url }}">{{ d.title }}</a>{% if d.hebrew_title %} <span class="he">{{ d.hebrew_title }}</span>{% endif %}
+        {% if d.parsha or d.occasion %}<span class="meta">{{ d.parsha | join: ", " }}{% if d.parsha and d.occasion %} · {% endif %}{{ d.occasion | join: ", " }}</span>{% endif %}</li>
+      {% endfor %}
+    </ol>
+
+    <details class="fullbook">
+      <summary>Read the whole book on one page</summary>
+      {% for d in items %}
+      <section class="chapter prose" id="{{ d.slug }}">
+        <h2>{{ d.title }}</h2>
+        {% if d.hebrew_title %}<p class="he big">{{ d.hebrew_title }}</p>{% endif %}
+        {{ d.content }}
+      </section>
+      {% endfor %}
+    </details>
+  {% endif %}
+</article>

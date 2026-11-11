@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% elsif page.name %}{{ page.name }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.summary | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Frank+Ruhl+Libre:wght@400;700&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-title">{{ site.title }}</span>
+        <span class="brand-tag">{{ site.tagline }}</span>
+      </a>
+      <nav class="site-nav">
+        <a href="{{ '/rabbis/' | relative_url }}">Rabbis</a>
+        <a href="{{ '/books/' | relative_url }}">Books</a>
+        <a href="{{ '/parshiyos/' | relative_url }}">Parshiyos</a>
+        <a href="{{ '/subjects/' | relative_url }}">Subjects</a>
+        <a href="{{ '/occasions/' | relative_url }}">Occasions</a>
+        <a href="{{ '/derashos/' | relative_url }}">Derashos</a>
+        <a href="{{ '/search/' | relative_url }}">Search</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>{{ site.title }} — an Early American Rabbis project.</p>
+    </div>
+  </footer>
+</body>
+</html>

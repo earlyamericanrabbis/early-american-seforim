@@ -1,0 +1,26 @@
+---
+title: Subjects
+permalink: /subjects/
+---
+{%- assign all = "" | split: "" -%}
+{%- for d in site.derashos -%}{%- if d.subjects -%}{%- assign all = all | concat: d.subjects -%}{%- endif -%}{%- endfor -%}
+{%- assign all = all | uniq | sort_natural -%}
+<h1>Derashos by Subject</h1>
+{% if all.size == 0 %}
+  <p class="empty">No subjects yet. Add <code>subjects:</code> to a derasha and it will appear here.</p>
+{% else %}
+  <div class="chips">
+    {% for s in all %}
+      {%- assign n = site.derashos | where: "subjects", s | size -%}
+      <a class="chip" href="#{{ s | slugify }}">{{ s }} <b>{{ n }}</b></a>
+    {% endfor %}
+  </div>
+  <hr>
+  {% for s in all %}
+    {%- assign items = site.derashos | where: "subjects", s -%}
+    <section class="group" id="{{ s | slugify }}">
+      <h3>{{ s }}</h3>
+      {% include derasha-list.html items=items %}
+    </section>
+  {% endfor %}
+{% endif %}

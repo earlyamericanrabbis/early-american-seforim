@@ -1,0 +1,27 @@
+---
+title: Occasions
+permalink: /occasions/
+---
+{%- assign all = "" | split: "" -%}
+{%- for d in site.derashos -%}{%- if d.occasion -%}{%- assign all = all | concat: d.occasion -%}{%- endif -%}{%- endfor -%}
+{%- assign all = all | uniq | sort_natural -%}
+<h1>Derashos by Occasion</h1>
+<p class="lede">Yomim Tovim, fast days, bar mitzvahs, weddings, hespedim, national holidays and other occasions.</p>
+{% if all.size == 0 %}
+  <p class="empty">No occasions yet. Add <code>occasion:</code> to a derasha and it will appear here.</p>
+{% else %}
+  <div class="chips">
+    {% for o in all %}
+      {%- assign n = site.derashos | where: "occasion", o | size -%}
+      <a class="chip" href="#{{ o | slugify }}">{{ o }} <b>{{ n }}</b></a>
+    {% endfor %}
+  </div>
+  <hr>
+  {% for o in all %}
+    {%- assign items = site.derashos | where: "occasion", o -%}
+    <section class="group" id="{{ o | slugify }}">
+      <h3>{{ o }}</h3>
+      {% include derasha-list.html items=items %}
+    </section>
+  {% endfor %}
+{% endif %}

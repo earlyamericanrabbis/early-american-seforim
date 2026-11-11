@@ -1,0 +1,1 @@
+Put book cover images here, named after the book, e.g. `pri-yehudah.jpg`.

@@ -1,0 +1,2 @@
+Put rabbi portraits, headstone photos and other pictures here.
+Name each file after the rabbi, e.g. `isaac-leeser.jpg`, `isaac-leeser-headstone.jpg`.

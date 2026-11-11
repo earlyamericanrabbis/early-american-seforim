@@ -1,0 +1,126 @@
+/* Early American Seforim — cream paper, dark ink, oxblood accents */
+:root {
+  --paper: #f7f1e3;
+  --paper-2: #efe6d0;
+  --ink: #2b2118;
+  --ink-soft: #6b5b4b;
+  --accent: #7a2e1d;
+  --gold: #a8844c;
+  --rule: #d9cdb1;
+  --serif: "EB Garamond", "Frank Ruhl Libre", Georgia, "Times New Roman", serif;
+  --hebrew: "Frank Ruhl Libre", "SBL Hebrew", "Times New Roman", serif;
+}
+* { box-sizing: border-box; }
+html { font-size: 19px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif); line-height: 1.6; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 1.25rem; }
+h1, h2, h3 { font-weight: 600; line-height: 1.2; }
+h1 { font-size: 2.2rem; margin: .6rem 0 .3rem; }
+h2 { font-size: 1.45rem; margin-top: 2.2rem; border-bottom: 1px solid var(--rule); padding-bottom: .25rem; }
+h3 { font-size: 1.2rem; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+code { background: var(--paper-2); padding: 0 .25em; border-radius: 3px; font-size: .85em; }
+
+/* Hebrew: any Hebrew text uses Frank Ruhl Libre and reads right-to-left */
+.he { font-family: var(--hebrew); direction: rtl; unicode-bidi: isolate; }
+.he.big { font-size: 1.5rem; margin: 0 0 .4rem; text-align: left; }
+[dir="rtl"], .rtl { direction: rtl; text-align: right; font-family: var(--hebrew); }
+
+/* Header */
+.site-header { background: var(--ink); color: var(--paper); border-bottom: 4px solid var(--gold); }
+.header-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 1.5rem; padding-top: .8rem; padding-bottom: .8rem; }
+.brand { color: var(--paper); display: flex; flex-direction: column; }
+.brand:hover { text-decoration: none; }
+.brand-title { font-size: 1.35rem; font-weight: 600; letter-spacing: .02em; }
+.brand-tag { font-size: .75rem; font-style: italic; opacity: .75; }
+.site-nav { display: flex; flex-wrap: wrap; gap: .3rem 1rem; font-size: .9rem; }
+.site-nav a { color: var(--paper); opacity: .9; }
+.site-nav a:hover { color: #fff; opacity: 1; }
+main { padding-bottom: 3rem; min-height: 70vh; }
+.site-footer { border-top: 1px solid var(--rule); color: var(--ink-soft); font-size: .8rem; padding: 1rem 0 2rem; }
+
+/* Home */
+.hero { text-align: center; padding: 2.5rem 0 1rem; }
+.hero h1 { font-size: 2.8rem; }
+.lede { font-size: 1.1rem; color: var(--ink-soft); max-width: 40em; margin: .3rem auto 1.5rem; }
+.hero .lede { margin-left: auto; margin-right: auto; }
+.ways { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1rem; }
+.way { display: flex; flex-direction: column; gap: .25rem; padding: 1.2rem 1.3rem; background: #fffaf0; border: 1px solid var(--rule); border-top: 3px solid var(--accent); border-radius: 4px; color: var(--ink); }
+.way:hover { text-decoration: none; border-color: var(--gold); box-shadow: 0 2px 10px rgba(60,40,20,.08); }
+.way-title { font-size: 1.3rem; font-weight: 600; color: var(--accent); }
+.way-desc { color: var(--ink-soft); font-size: .95rem; flex: 1; }
+.way-count { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--gold); }
+
+/* Cards (rabbis, books) */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.card { display: flex; gap: .9rem; padding: .9rem; background: #fffaf0; border: 1px solid var(--rule); border-radius: 4px; color: var(--ink); }
+.card:hover { text-decoration: none; border-color: var(--gold); }
+.card img, .faux-cover { width: 84px; height: 108px; object-fit: cover; border-radius: 2px; flex-shrink: 0; background: var(--paper-2); }
+.card-body { display: flex; flex-direction: column; gap: .1rem; }
+.faux-cover { display: flex; align-items: center; justify-content: center; padding: .4rem; background: var(--accent); color: var(--paper); font-size: .65rem; text-align: center; line-height: 1.2; border: 3px double var(--gold); }
+.dates { color: var(--ink-soft); font-size: .9rem; }
+.meta { color: var(--ink-soft); font-size: .85rem; }
+
+/* Rabbi page */
+.crumbs { font-size: .85rem; color: var(--ink-soft); margin: 1.2rem 0 0; }
+.rabbi-head, .book-head { display: flex; gap: 1.6rem; align-items: flex-start; margin-top: .5rem; }
+.portrait { width: 200px; border: 6px solid #fffaf0; box-shadow: 0 1px 6px rgba(60,40,20,.2); flex-shrink: 0; }
+.cover { width: 170px; box-shadow: 0 1px 6px rgba(60,40,20,.25); flex-shrink: 0; }
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: .2rem 1rem; margin: .8rem 0; font-size: .95rem; }
+.facts dt { color: var(--ink-soft); font-variant: small-caps; letter-spacing: .04em; }
+.facts dd { margin: 0; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+.gallery figure { margin: 0; }
+.gallery img { width: 100%; border: 4px solid #fffaf0; box-shadow: 0 1px 4px rgba(60,40,20,.2); }
+figcaption { font-size: .8rem; color: var(--ink-soft); font-style: italic; }
+.sources { font-size: .85rem; }
+.notice { background: #fbf3dc; border-left: 4px solid var(--gold); padding: .6rem .9rem; font-size: .9rem; }
+.eyebrow { margin: 0; font-size: .95rem; font-variant: small-caps; letter-spacing: .05em; }
+.pill { display: inline-block; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; padding: .1rem .55rem; border: 1px solid var(--gold); border-radius: 999px; color: var(--gold); }
+.empty { color: var(--ink-soft); font-style: italic; }
+
+/* Reading text */
+.prose { font-size: 1.05rem; }
+.prose p { text-align: justify; hyphens: auto; unicode-bidi: plaintext; } /* Hebrew paragraphs flow right-to-left automatically */
+.prose blockquote { margin: 1rem 2rem; font-style: italic; }
+.prose .footnotes { font-size: .85rem; border-top: 1px solid var(--rule); margin-top: 2rem; }
+
+/* Lists */
+.dlist, .blist, .toc { padding-left: 1.2rem; }
+.dlist li, .blist li, .toc li { margin: .45rem 0; }
+.dlist .meta, .blist .meta, .toc .meta { display: block; }
+.dlist .snip { display: block; font-size: .85rem; color: var(--ink-soft); }
+.dtitle { font-weight: 600; }
+.toc { font-size: 1.05rem; }
+
+/* Tags & chips */
+.tags { display: flex; flex-wrap: wrap; gap: .4rem; margin: .6rem 0; }
+.tag { font-size: .8rem; padding: .1rem .6rem; border-radius: 999px; background: var(--paper-2); border: 1px solid var(--rule); color: var(--ink); }
+.tag-parsha { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+.tag-occasion { background: var(--gold); color: #fff; border-color: var(--gold); }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+.chip { font-size: .85rem; padding: .2rem .7rem; background: #fffaf0; border: 1px solid var(--rule); border-radius: 4px; color: var(--ink); }
+.chip b { color: var(--accent); }
+.chip-empty { opacity: .5; }
+.chumash h2 .meta { font-weight: 400; }
+.group { scroll-margin-top: 1rem; }
+
+/* Pager */
+.pager { display: flex; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1rem; font-size: .95rem; }
+.pager .next { text-align: right; }
+
+/* Whole-book view */
+.fullbook { margin-top: 2rem; }
+.fullbook summary { cursor: pointer; font-size: 1.1rem; color: var(--accent); }
+.chapter { border-top: 1px solid var(--rule); margin-top: 2rem; }
+
+.filter { width: 100%; font: inherit; padding: .55rem .8rem; border: 1px solid var(--rule); border-radius: 4px; background: #fffaf0; margin: .5rem 0 1rem; }
+
+@media (max-width: 640px) {
+  html { font-size: 17px; }
+  .rabbi-head, .book-head { flex-direction: column; }
+  .portrait { width: 160px; }
+}
+.card-body .he, .toc .he, .dlist .he, .blist .he { text-align: left; }

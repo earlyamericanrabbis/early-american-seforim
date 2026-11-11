@@ -1,0 +1,44 @@
+---
+layout: default
+---
+{%- assign book = site.books | where: "slug", page.book | first -%}
+{%- assign rabbi_slug = page.rabbi | default: book.rabbi -%}
+{%- assign rabbi = site.rabbis | where: "slug", rabbi_slug | first -%}
+{%- assign items = site.derashos | where: "book", page.book | sort: "order" -%}
+{%- assign i = 0 -%}
+{%- for d in items -%}{%- if d.url == page.url -%}{%- assign i = forloop.index0 -%}{%- endif -%}{%- endfor -%}
+{%- assign prev_i = i | minus: 1 -%}
+{%- assign next_i = i | plus: 1 -%}
+{%- if i > 0 -%}{%- assign prev = items[prev_i] -%}{%- endif -%}
+{%- assign next = items[next_i] -%}
+
+<article class="derasha">
+  <p class="crumbs">
+    {% if rabbi %}<a href="{{ rabbi.url | relative_url }}">{{ rabbi.name }}</a> ›{% endif %}
+    {% if book %}<a href="{{ book.url | relative_url }}"><em>{{ book.title }}</em></a> ›{% endif %}
+  </p>
+
+  <h1>{{ page.title }}</h1>
+  {% if page.hebrew_title %}<p class="he big">{{ page.hebrew_title }}</p>{% endif %}
+
+  <div class="tags">
+    {% for p in page.parsha %}<a class="tag tag-parsha" href="{{ '/parshiyos/' | relative_url }}#{{ p | slugify }}">Parshas {{ p }}</a>{% endfor %}
+    {% for o in page.occasion %}<a class="tag tag-occasion" href="{{ '/occasions/' | relative_url }}#{{ o | slugify }}">{{ o }}</a>{% endfor %}
+    {% for s in page.subjects %}<a class="tag" href="{{ '/subjects/' | relative_url }}#{{ s | slugify }}">{{ s }}</a>{% endfor %}
+  </div>
+  {% if page.delivered or page.original_pages %}
+  <p class="meta">{% if page.delivered %}Delivered: {{ page.delivered }}{% endif %}{% if page.delivered and page.original_pages %} · {% endif %}{% if page.original_pages %}Original pages {{ page.original_pages }}{% endif %}</p>
+  {% endif %}
+
+  {% if page.example %}<p class="notice">This is an example page showing how a derasha looks. Delete it once real derashos are added.</p>{% endif %}
+
+  <section class="prose">
+    {{ content }}
+  </section>
+
+  <nav class="pager">
+    {% if prev %}<a class="prev" href="{{ prev.url | relative_url }}">‹ {{ prev.title }}</a>{% else %}<span></span>{% endif %}
+    {% if book %}<a class="up" href="{{ book.url | relative_url }}">Contents</a>{% endif %}
+    {% if next %}<a class="next" href="{{ next.url | relative_url }}">{{ next.title }} ›</a>{% else %}<span></span>{% endif %}
+  </nav>
+</article>

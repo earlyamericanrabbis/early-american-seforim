@@ -1,0 +1,67 @@
+---
+layout: default
+---
+{%- assign portrait = page.portrait | default: '/assets/images/portrait-placeholder.svg' -%}
+{%- assign books = site.books | where: "rabbi", page.slug | sort: "year" -%}
+<article class="rabbi">
+  <p class="crumbs"><a href="{{ '/rabbis/' | relative_url }}">Rabbis</a> ›</p>
+
+  <div class="rabbi-head">
+    <img class="portrait" src="{{ portrait | relative_url }}" alt="Portrait of {{ page.name }}">
+    <div>
+      <h1>{{ page.name }}</h1>
+      {% if page.hebrew_name %}<p class="he big">{{ page.hebrew_name }}</p>{% endif %}
+      <dl class="facts">
+        {% if page.born %}<dt>Born</dt><dd>{{ page.born }}{% if page.birthplace %}, {{ page.birthplace }}{% endif %}</dd>{% endif %}
+        {% if page.died %}<dt>Died</dt><dd>{{ page.died }}{% if page.deathplace %}, {{ page.deathplace }}{% endif %}</dd>{% endif %}
+        {% if page.positions and page.positions.size > 0 %}<dt>Positions</dt><dd>{% for p in page.positions %}{{ p }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}</dd>{% endif %}
+        {% if page.communities and page.communities.size > 0 %}<dt>Communities</dt><dd>{{ page.communities | join: "; " }}</dd>{% endif %}
+        {% if page.burial %}<dt>Buried</dt><dd>{{ page.burial }}{% if page.burial_plot %} — {{ page.burial_plot }}{% endif %}</dd>{% endif %}
+      </dl>
+    </div>
+  </div>
+
+  {% if page.status == "draft" %}
+  <p class="notice">This biography is a draft and is still being researched and verified.</p>
+  {% endif %}
+
+  <section class="prose bio">
+    {{ content }}
+  </section>
+
+  {% if page.gallery and page.gallery.size > 0 %}
+  <section>
+    <h2>Pictures</h2>
+    <div class="gallery">
+      {% for g in page.gallery %}
+      <figure>
+        <img src="{{ g.image | relative_url }}" alt="{{ g.caption | escape }}">
+        {% if g.caption %}<figcaption>{{ g.caption }}</figcaption>{% endif %}
+      </figure>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section>
+    <h2>Seforim by {{ page.short_name | default: page.name }}</h2>
+    {% if books.size == 0 %}
+      <p class="empty">No books have been added yet.</p>
+    {% else %}
+      <ul class="blist">
+      {% for b in books %}
+        {%- assign n = site.derashos | where: "book", b.slug | size -%}
+        <li><a href="{{ b.url | relative_url }}"><em>{{ b.title }}</em></a>{% if b.hebrew_title %} <span class="he">{{ b.hebrew_title }}</span>{% endif %}
+          <span class="meta">{{ b.printed }}{% if n > 0 %}{% if b.printed %} · {% endif %}{{ n }} derash{% if n == 1 %}a{% else %}os{% endif %}{% endif %}</span></li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  </section>
+
+  {% if page.sources and page.sources.size > 0 %}
+  <section class="sources">
+    <h2>Sources for this biography</h2>
+    <ul>{% for s in page.sources %}<li>{{ s | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}</ul>
+  </section>
+  {% endif %}
+</article>

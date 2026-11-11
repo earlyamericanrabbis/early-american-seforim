@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 250" width="200" height="250">
+  <rect width="200" height="250" fill="#efe6d0"/>
+  <circle cx="100" cy="95" r="42" fill="#d9cdb1"/>
+  <path d="M30 250 C30 175 170 175 170 250 Z" fill="#d9cdb1"/>
+  <text x="100" y="238" font-family="Georgia, serif" font-size="13" fill="#6b5b4b" text-anchor="middle">Portrait to come</text>
+</svg>
