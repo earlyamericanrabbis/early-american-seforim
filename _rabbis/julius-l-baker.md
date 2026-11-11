@@ -1,4 +1,4 @@
-_rabbis/---
+---
 name: Rabbi Julius L. Baker
 short_name: Rabbi Baker
 sort_name: Baker, Julius L.
