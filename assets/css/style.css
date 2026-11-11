@@ -150,3 +150,4 @@ figcaption { font-size: .8rem; color: var(--ink-soft); font-style: italic; }
 .chip b { margin-inline-start: .25rem; direction: ltr; unicode-bidi: isolate; }
 .focus-bar { background: #fbf3dc; border-left: 4px solid var(--gold); padding: .5rem .9rem; display: flex; justify-content: space-between; gap: 1rem; scroll-margin-top: .5rem; }
 .focus-bar[hidden] { display: none; }
+.verses { font-style: italic; color: var(--ink-soft); margin: .2rem 0 .6rem; }
