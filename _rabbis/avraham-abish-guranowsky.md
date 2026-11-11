@@ -1,23 +1,22 @@
 ---
-name: "Rabbi Avraham Abish Guranowsky"
-short_name: "Rabbi Guranowsky"
-sort_name: "Guranowsky, Avraham Abish"
-hebrew_name: "אברהם אבוש ב\"ר ישראל"
-born:
-birthplace:
-died:
-deathplace:
-yahrzeit: "8th of Tishrei, 5673"
+name: Rabbi Avraham Abish Guranowsky
+short_name: Rabbi Guranowsky
+sort_name: Guranowsky, Avraham Abish
+hebrew_name: אברהם אבוש ב"ר ישראל
+yahrzeit: 8th of Tishrei, 5673
+yahrzeit_day: 8
+yahrzeit_month: Tishrei
+yahrzeit_month_num: 1
+states:
+- NY
+communities:
+- New York City
 positions:
-  - "Rav in New York City"
-communities: ["New York City"]
-seforim: ["Even Yisrael"]
-burial:
-burial_plot:
+- Rav in New York City
+seforim:
+- Even Yisrael
 portrait: /assets/images/rabbis/avraham-abish-guranowsky.jpg
-gallery: []
 status: draft
-sources: []
 ---
 
 Biography to be written.

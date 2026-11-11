@@ -1,23 +1,23 @@
 ---
-name: "Rabbi Gedaliah Silverstone"
-short_name: "Rabbi Silverstone"
-sort_name: "Silverstone, Gedaliah"
-hebrew_name: "גדליה ב\"ר ישעיה מאיר"
-born:
-birthplace:
-died:
-deathplace:
-yahrzeit: "1st of Av, 5704"
+name: Rabbi Gedaliah Silverstone
+short_name: Rabbi Silverstone
+sort_name: Silverstone, Gedaliah
+hebrew_name: גדליה ב"ר ישעיה מאיר
+yahrzeit: 1st of Av, 5704
+yahrzeit_day: 1
+yahrzeit_month: Av
+yahrzeit_month_num: 11
+states:
+- DC
+- WA
+communities:
+- Washington, DC
 positions:
-  - "Chief Rabbi of Washington, DC"
-communities: ["Washington, DC"]
-seforim: ["Otzer Nechmad"]
-burial:
-burial_plot:
+- Chief Rabbi of Washington, DC
+seforim:
+- Otzer Nechmad
 portrait: /assets/images/rabbis/gedaliah-silverstone.jpg
-gallery: []
 status: draft
-sources: []
 ---
 
 Biography to be written.

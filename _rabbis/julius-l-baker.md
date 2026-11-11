@@ -2,20 +2,13 @@
 name: Rabbi Julius L. Baker
 short_name: Rabbi Baker
 sort_name: Baker, Julius L.
-hebrew_name:
-born:
-birthplace:
-died:
-deathplace:
+states:
+- OH
+communities:
+- Columbus, OH
 positions:
-  - "Rabbi, Congregation Ahavas Sholom, Columbus, Ohio"
-communities: ["Columbus, OH"]
-burial:
-burial_plot:
-portrait:
-gallery: []
+- Rabbi, Congregation Ahavas Sholom, Columbus, Ohio
 status: draft
-sources: []
 ---
 
 Biography to be written.

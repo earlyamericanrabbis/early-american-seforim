@@ -1,23 +1,16 @@
 ---
-name: "Rabbi Dr. Samuel Rosenblatt"
-short_name: "Rabbi Rosenblatt"
-sort_name: "Rosenblatt, Samuel"
-hebrew_name:
-born:
-birthplace:
-died:
-deathplace:
-yahrzeit:
+name: Rabbi Dr. Samuel Rosenblatt
+short_name: Rabbi Rosenblatt
+sort_name: Rosenblatt, Samuel
+states:
+- MD
+communities:
+- Baltimore, MD
 positions:
-  - "Rabbi, Beth Tfiloh Congregation, Baltimore, Maryland"
-communities: ["Baltimore, MD"]
-seforim: ["Hear, Oh Israel"]
-burial:
-burial_plot:
-portrait:
-gallery: []
+- Rabbi, Beth Tfiloh Congregation, Baltimore, Maryland
+seforim:
+- Hear, Oh Israel
 status: draft
-sources: []
 ---
 
 Biography to be written.

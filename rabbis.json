@@ -1,0 +1,24 @@
+---
+layout: null
+permalink: /rabbis.json
+---
+[
+{%- assign rs = site.rabbis | sort: "sort_name" -%}
+{%- for r in rs -%}
+  {
+    "name": {{ r.name | jsonify }},
+    "hebrew": {{ r.hebrew_name | jsonify }},
+    "sort": {{ r.sort_name | default: r.name | jsonify }},
+    "url": {{ r.url | relative_url | jsonify }},
+    "portrait": {% if r.portrait %}{{ r.portrait | relative_url | jsonify }}{% else %}null{% endif %},
+    "born": {{ r.born_year | default: r.born | jsonify }},
+    "died": {{ r.died_year | default: r.died | jsonify }},
+    "yahrzeit": {{ r.yahrzeit | jsonify }},
+    "ym": {{ r.yahrzeit_month | jsonify }},
+    "yd": {{ r.yahrzeit_day | jsonify }},
+    "states": {{ r.states | default: "" | jsonify }},
+    "places": {{ r.communities | join: "; " | jsonify }},
+    "featured": {% if r.featured %}true{% else %}false{% endif %}
+  }{% unless forloop.last %},{% endunless %}
+{%- endfor -%}
+]

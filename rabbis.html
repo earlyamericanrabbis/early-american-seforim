@@ -2,18 +2,22 @@
 title: Rabbis
 permalink: /rabbis/
 ---
-<h1>The Rabbis</h1>
-<div class="cards">
-{%- assign rabbis = site.rabbis | sort: "sort_name" -%}
-{%- for r in rabbis -%}
-  <a class="card rabbi-card" href="{{ r.url | relative_url }}">
-    <img src="{{ r.portrait | default: '/assets/images/portrait-placeholder.svg' | relative_url }}" alt="">
-    <span class="card-body">
-      <strong>{{ r.name }}</strong>
-      {% if r.hebrew_name %}<span class="he">{{ r.hebrew_name }}</span>{% endif %}
-      {% if r.born or r.died %}<span class="dates">{{ r.born | default: "?" }} – {{ r.died | default: "?" }}</span>{% elsif r.yahrzeit %}<span class="dates">Yahrzeit: {{ r.yahrzeit }}</span>{% endif %}
-      {% if r.communities %}<span class="meta">{{ r.communities | join: " · " }}</span>{% endif %}
-    </span>
-  </a>
-{%- endfor -%}
+<div id="rabbi-directory">
+  <h1>The Rabbis</h1>
+  <p class="lede">Search by name in English or Hebrew, by city, or click a state on the map.</p>
+
+  <div class="dir-map">{% include us-map.svg %}</div>
+
+  <div class="dir-controls">
+    <input id="rq" class="filter" type="search" placeholder="Name, Hebrew name, city or yahrzeit…">
+    <select id="rstate" class="filter"><option value="">All states</option></select>
+    <button id="rclear" type="button" class="btn btn-outline">Clear</button>
+  </div>
+  <div id="rletters" class="letters"></div>
+  <p id="rstatus" class="meta dir-status"></p>
+  <div id="rresults" class="rabbi-grid"></div>
+
+  <noscript>
+    <ul>{% assign rs = site.rabbis | sort: "sort_name" %}{% for r in rs %}<li><a href="{{ r.url | relative_url }}">{{ r.name }}</a></li>{% endfor %}</ul>
+  </noscript>
 </div>

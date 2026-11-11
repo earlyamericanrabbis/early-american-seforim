@@ -12,10 +12,27 @@ title: Home
 <section class="hero">
   <h1>{{ site.title }}</h1>
   <p class="lede">{{ site.description }}</p>
+  <form id="home-search" class="home-search" autocomplete="off">
+    <input type="search" placeholder="Search {{ n_rabbis }} rabbis by name, Hebrew name, city or state…" aria-label="Search rabbis">
+    <div class="hs-results" hidden></div>
+  </form>
   <p class="hero-actions">
-    <a class="btn" href="#rabbis">Meet the Rabbis</a>
+    <a class="btn" href="{{ '/rabbis/' | relative_url }}">Browse the Rabbis</a>
     <a class="btn btn-outline" href="{{ '/print/' | relative_url }}">Print Editions</a>
   </p>
+</section>
+
+<section class="home-twin">
+  <div id="yahrzeits" class="yahrzeits">
+    <h2>Yahrzeits This Week</h2>
+    <div class="yz-list"><p class="meta">Loading…</p></div>
+  </div>
+  <div id="home-map" class="home-map">
+    <h2>Rabbis Across America</h2>
+    <p class="meta">Click a state to see the rabbis who served there.</p>
+    {% include us-map.svg %}
+    <div id="map-pick" class="map-pick"></div>
+  </div>
 </section>
 
 {% if featured.size > 0 %}
@@ -38,12 +55,12 @@ title: Home
 
 <section id="rabbis" class="home-rabbis">
   <div class="section-head">
-    <h2>The Rabbis</h2>
+    <h2>Meet the Rabbis</h2>
     <a href="{{ '/rabbis/' | relative_url }}">All {{ n_rabbis }} rabbis ›</a>
   </div>
+  {%- if with_portrait.size > 12 -%}{%- assign show = with_portrait | sample: 12 -%}{%- else -%}{%- assign show = with_portrait | concat: without_portrait -%}{%- endif -%}
   <div class="rabbi-grid">
-    {% for r in with_portrait %}{% include rabbi-tile.html rabbi=r %}{% endfor %}
-    {% for r in without_portrait %}{% include rabbi-tile.html rabbi=r %}{% endfor %}
+    {% for r in show limit: 12 %}{% include rabbi-tile.html rabbi=r %}{% endfor %}
   </div>
 </section>
 

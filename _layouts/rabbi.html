@@ -3,35 +3,93 @@ layout: default
 ---
 {%- assign portrait = page.portrait | default: '/assets/images/portrait-placeholder.svg' -%}
 {%- assign books = site.books | where: "rabbi", page.slug | sort: "year" -%}
-<article class="rabbi">
-  <p class="crumbs"><a href="{{ '/rabbis/' | relative_url }}">Rabbis</a> ›</p>
+{%- assign by = page.born_year | default: page.born -%}
+{%- assign dy = page.died_year | default: page.died -%}
+{%- assign bio_text = content | strip_html | strip -%}
+{%- assign has_bio = true -%}
+{%- if bio_text == "" or bio_text contains "Biography to be written" -%}{%- assign has_bio = false -%}{%- endif -%}
+<article class="rabbi rabbi-v2">
+  <p class="crumbs"><a href="{{ '/rabbis/' | relative_url }}">Rabbis</a> ›{% for s in page.states limit: 1 %} <a href="{{ '/rabbis/' | relative_url }}?state={{ s }}">{{ site.data.states[s] | default: s }}</a> ›{% endfor %}</p>
 
-  <div class="rabbi-head">
+  <header class="rv-head">
     <img class="portrait" src="{{ portrait | relative_url }}" alt="Portrait of {{ page.name }}">
-    <div>
+    <div class="rv-id">
       <h1>{{ page.name }}</h1>
       {% if page.hebrew_name %}<p class="he big">{{ page.hebrew_name }}</p>{% endif %}
-      <dl class="facts">
-        {% if page.born %}<dt>Born</dt><dd>{{ page.born }}{% if page.birthplace %}, {{ page.birthplace }}{% endif %}</dd>{% endif %}
-        {% if page.died %}<dt>Died</dt><dd>{{ page.died }}{% if page.deathplace %}, {{ page.deathplace }}{% endif %}</dd>{% endif %}
-        {% if page.yahrzeit %}<dt>Yahrzeit</dt><dd>{{ page.yahrzeit }}</dd>{% endif %}
-        {% if page.positions and page.positions.size > 0 %}<dt>Positions</dt><dd>{% for p in page.positions %}{{ p }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}</dd>{% endif %}
-        {% if page.communities and page.communities.size > 0 %}<dt>Communities</dt><dd>{{ page.communities | join: "; " }}</dd>{% endif %}
-        {% if page.seforim and page.seforim.size > 0 %}<dt>Seforim</dt><dd>{% for s in page.seforim %}<em>{{ s }}</em>{% unless forloop.last %}; {% endunless %}{% endfor %}</dd>{% endif %}
-        {% if page.burial %}<dt>Buried</dt><dd>{{ page.burial }}{% if page.burial_plot %} — {{ page.burial_plot }}{% endif %}</dd>{% endif %}
-      </dl>
+      {% if by or dy %}<p class="rv-years">{{ by | default: "?" }} – {{ dy | default: "?" }}</p>{% endif %}
+      {% if page.yahrzeit %}<p class="rv-yahrzeit"><span>Yahrzeit</span> {{ page.yahrzeit }}</p>{% endif %}
+      {% if page.states.size > 0 %}
+      <p class="rv-states">{% for s in page.states %}<a class="tag" href="{{ '/rabbis/' | relative_url }}?state={{ s }}">{{ site.data.states[s] | default: s }}</a>{% endfor %}</p>
+      {% endif %}
     </div>
-  </div>
+  </header>
 
-  {% if page.status == "draft" %}
+  {% if page.status == "draft" and has_bio %}
   <p class="notice">This biography is a draft and is still being researched and verified.</p>
   {% endif %}
 
-  <section class="prose bio">
-    {{ content }}
+  <section class="rv-facts">
+    {% if page.born or page.birthplace %}<div class="fact"><span class="fl">Born</span><span class="fv">{{ page.born }}{% if page.born and page.birthplace %}<br>{% endif %}{{ page.birthplace }}</span></div>{% endif %}
+    {% if page.immigrated %}<div class="fact"><span class="fl">Came to America</span><span class="fv">{{ page.immigrated }}</span></div>{% endif %}
+    {% if page.died or page.deathplace %}<div class="fact"><span class="fl">Passed away</span><span class="fv">{{ page.died }}{% if page.died and page.deathplace %}<br>{% endif %}{{ page.deathplace }}</span></div>{% endif %}
+    {% if page.yahrzeit %}<div class="fact"><span class="fl">Yahrzeit</span><span class="fv">{{ page.yahrzeit }}</span></div>{% endif %}
+    {% if page.burial %}<div class="fact fact-wide"><span class="fl">Resting place</span><span class="fv">{{ page.burial }}{% if page.burial_plot %}<br><span class="meta">{{ page.burial_plot }}</span>{% endif %}</span></div>{% endif %}
   </section>
 
-  {%- comment -%} Print editions: his own books, plus anthologies he appears in {%- endcomment -%}
+  {% if has_bio %}
+  <section class="prose bio">
+    <h2>Biography</h2>
+    {{ content }}
+  </section>
+  {% endif %}
+
+  {%- comment -%} A life timeline, built only from the facts we have {%- endcomment -%}
+  {%- capture tl -%}
+    {% if page.born or page.birthplace %}<li><span class="tl-when">{{ by }}</span><span class="tl-what">Born{% if page.birthplace %} in {{ page.birthplace }}{% endif %}</span></li>{% endif %}
+    {% if page.yeshivos.size > 0 %}<li><span class="tl-when"></span><span class="tl-what">Learned in {{ page.yeshivos | join: ", " }}</span></li>{% endif %}
+    {% if page.semicha.size > 0 %}<li><span class="tl-when"></span><span class="tl-what">Received semicha from {{ page.semicha | join: "; " }}</span></li>{% endif %}
+    {% if page.immigrated %}<li><span class="tl-when">{{ page.immigrated }}</span><span class="tl-what">Came to America</span></li>{% endif %}
+    {% for c in page.communities %}<li><span class="tl-when"></span><span class="tl-what">Served {{ c }}</span></li>{% endfor %}
+    {% for p in page.positions %}<li><span class="tl-when"></span><span class="tl-what">{{ p }}</span></li>{% endfor %}
+    {% if page.died or page.deathplace %}<li><span class="tl-when">{{ dy }}</span><span class="tl-what">Passed away{% if page.deathplace %} in {{ page.deathplace }}{% endif %}</span></li>{% endif %}
+    {% if page.burial %}<li><span class="tl-when"></span><span class="tl-what">Buried at {{ page.burial }}</span></li>{% endif %}
+  {%- endcapture -%}
+  {% assign tl_s = tl | strip %}
+  {% if tl_s != "" %}
+  <section class="rv-timeline">
+    <h2>His Life</h2>
+    <ol class="timeline">{{ tl }}</ol>
+  </section>
+  {% endif %}
+
+  <div class="rv-cols">
+    {% if page.yeshivos.size > 0 or page.semicha.size > 0 %}
+    <section class="rv-box">
+      <h3>Torah Learning</h3>
+      {% if page.yeshivos.size > 0 %}<p class="fl">Yeshivos</p><ul>{% for y in page.yeshivos %}<li>{{ y }}</li>{% endfor %}</ul>{% endif %}
+      {% if page.semicha.size > 0 %}<p class="fl">Semicha from</p><ul>{% for s in page.semicha %}<li>{{ s }}</li>{% endfor %}</ul>{% endif %}
+    </section>
+    {% endif %}
+    {% if page.communities.size > 0 or page.positions.size > 0 %}
+    <section class="rv-box">
+      <h3>Communities Served</h3>
+      <ul>{% for p in page.positions %}<li>{{ p }}</li>{% endfor %}{% for c in page.communities %}{% unless page.positions contains c %}<li>{{ c }}</li>{% endunless %}{% endfor %}</ul>
+    </section>
+    {% endif %}
+    {%- assign works = page.works | default: page.seforim -%}
+    {% if works.size > 0 %}
+    <section class="rv-box">
+      <h3>Seforim &amp; Works</h3>
+      <ul>
+        {% for w in works %}
+          {%- assign wb = site.books | where: "title", w | first -%}
+          <li>{% if wb %}<a href="{{ wb.url | relative_url }}"><em>{{ w }}</em></a>{% else %}<em>{{ w }}</em>{% endif %}</li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+  </div>
+
   {%- assign print_books = site.books | where: "rabbi", page.slug | where_exp: "b", "b.in_print != false" -%}
   {%- assign anths = site.books | where: "anthology", true | where_exp: "b", "b.in_print != false" -%}
   {%- for a in anths -%}
@@ -40,23 +98,9 @@ layout: default
   {%- endfor -%}
   {% if print_books.size > 0 %}
   <section class="rabbi-print">
-    <h2>Available in print</h2>
+    <h2>Available in Print</h2>
     <div class="print-list compact">
       {% for b in print_books %}{% include print-card.html book=b %}{% endfor %}
-    </div>
-  </section>
-  {% endif %}
-
-  {% if page.gallery and page.gallery.size > 0 %}
-  <section>
-    <h2>Pictures</h2>
-    <div class="gallery">
-      {% for g in page.gallery %}
-      <figure>
-        <img src="{{ g.image | relative_url }}" alt="{{ g.caption | escape }}">
-        {% if g.caption %}<figcaption>{{ g.caption }}</figcaption>{% endif %}
-      </figure>
-      {% endfor %}
     </div>
   </section>
   {% endif %}
@@ -81,27 +125,39 @@ layout: default
   </section>
   {% endif %}
 
-  {% if books.size > 0 or in_anth.size == 0 %}
+  {% if books.size > 0 %}
   <section>
-    <h2>Seforim in the online library</h2>
-    {% if books.size == 0 %}
-      <p class="empty">No books have been added yet.</p>
-    {% else %}
-      <ul class="blist">
-      {% for b in books %}
-        {%- assign n = site.derashos | where: "book", b.slug | size -%}
-        <li><a href="{{ b.url | relative_url }}"><em>{{ b.title }}</em></a>{% if b.hebrew_title %} <span class="he">{{ b.hebrew_title }}</span>{% endif %}
-          <span class="meta">{{ b.printed }}{% if n > 0 %}{% if b.printed %} · {% endif %}{{ n }} derash{% if n == 1 %}a{% else %}os{% endif %}{% endif %}</span></li>
+    <h2>Seforim in the Online Library</h2>
+    <ul class="blist">
+    {% for b in books %}
+      {%- assign n = site.derashos | where: "book", b.slug | size -%}
+      <li><a href="{{ b.url | relative_url }}"><em>{{ b.title }}</em></a>{% if b.hebrew_title %} <span class="he">{{ b.hebrew_title }}</span>{% endif %}
+        <span class="meta">{{ b.printed }}{% if n > 0 %}{% if b.printed %} · {% endif %}{{ n }} derash{% if n == 1 %}a{% else %}os{% endif %}{% endif %}</span></li>
+    {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if page.gallery and page.gallery.size > 0 %}
+  <section>
+    <h2>Pictures</h2>
+    <div class="gallery">
+      {% for g in page.gallery %}
+      <figure>
+        <img src="{{ g.image | relative_url }}" alt="{{ g.caption | escape }}" loading="lazy">
+        {% if g.caption %}<figcaption>{{ g.caption }}</figcaption>{% endif %}
+      </figure>
       {% endfor %}
-      </ul>
-    {% endif %}
+    </div>
   </section>
   {% endif %}
 
   {% if page.sources and page.sources.size > 0 %}
   <section class="sources">
-    <h2>Sources for this biography</h2>
+    <h2>Sources</h2>
     <ul>{% for s in page.sources %}<li>{{ s | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}</ul>
   </section>
   {% endif %}
+
+  {% unless has_bio %}<p class="meta rv-pending">A full biography of {{ page.short_name | default: page.name }} is being prepared.</p>{% endunless %}
 </article>

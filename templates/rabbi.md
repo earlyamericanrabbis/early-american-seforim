@@ -1,24 +1,40 @@
 ---
-name: Rabbi Full Name
-short_name: Rabbi Lastname        # used in headings like "Seforim by Rabbi Lastname"
-sort_name: Lastname, Firstname    # used to put the rabbis in alphabetical order
-hebrew_name:                      # optional
-born:                             # e.g. 1855, or March 3, 1855
-birthplace:                       # e.g. Kovno, Lithuania
+name: "Rabbi Firstname Lastname"
+short_name: "Rabbi Lastname"          # used in headings like "Derashos by Rabbi Lastname"
+sort_name: "Lastname, Firstname"      # alphabetical order
+first_name: Firstname
+last_name: Lastname
+hebrew_name:                          # e.g. שמחה ב"ר משה יהודא
+born:                                 # e.g. 1863, or March 3, 1863
+born_year:                            # just the year, e.g. 1863
+birthplace:                           # e.g. Pressburg, Hungary
+immigrated:                           # year he came to America
 died:
-deathplace:
-positions:                        # one per line, each starting with a dash
-  - Rabbi, Congregation Name, City (years)
-communities: ["City, ST", "City, ST"]   # keep the quotation marks
-burial:                           # cemetery name and city
-burial_plot:                      # section / row / plot
-portrait:                         # e.g. /assets/images/rabbis/firstname-lastname.jpg
-gallery:                          # more pictures: headstone, shul, documents
+died_year:
+deathplace:                           # e.g. New York, NY
+yahrzeit: "15th of Kislev, 5686"
+yahrzeit_day: 15                      # these two make "Yahrzeits This Week" work
+yahrzeit_month: Kislev                # Tishrei, Cheshvan, Kislev, Teves, Shevat, Adar, Nissan, Iyar, Sivan, Tammuz, Av, Elul
+burial: "Mount Zion Cemetery, Queens, NY"
+burial_plot:                          # section / row / plot
+states: [NY]                          # postal codes; these put him on the map
+communities:                          # one per line, "City, ST"
+  - "Williamsburg, Brooklyn, NY"
+positions:                            # optional: titles and congregations
+  - "Rav, Congregation Name, City (years)"
+yeshivos:
+  - Pressburg
+semicha:                              # who gave him semicha
+  - "Rabbi Simcha Bunim Sofer (Shevet Sofer)"
+works:                                # his seforim
+  - Zoharei Torah
+portrait: /assets/images/rabbis/firstname-lastname.jpg
+gallery:                              # more pictures: headstone, shul, documents
   - image: /assets/images/rabbis/firstname-lastname-headstone.jpg
     caption: Headstone, Cemetery Name
-status: draft                     # change to "final" when the biography is verified
-featured: false                   # true = show him large at the top of the home page
-sources:                          # where the biographical facts come from
+featured: false                       # true = shown large on the home page
+status: draft                         # "final" once the biography is verified
+sources:
   - "Obituary, *Newspaper Name*, date"
 ---
 

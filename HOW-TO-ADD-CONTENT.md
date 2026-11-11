@@ -75,6 +75,14 @@ blurb: One or two sentences for the Print Editions page.
 
 *Chazon Yeshayahu* and the *Book of Sermons* point to *Kisvei Rav Yeshayahu Glazer*, since they're printed as part of it. Put the Amazon link on the *Kisvei* file.
 
+## Rabbis: the map, search and Yahrzeits This Week
+
+Rabbis are imported from the "Rabbanim You Should Know data" Google Sheet; rows marked **Ready for AI** are the ones that go on the site. You can also edit a rabbi's file in `_rabbis/` directly — the blank form is `templates/rabbi.md`.
+
+- `states:` (postal codes like `NY`, `IL`) puts a rabbi on the map and in the state filter.
+- `yahrzeit_day:` and `yahrzeit_month:` make him appear in **Yahrzeits This Week** on the home page.
+- Every section of a rabbi's page appears only when it has information, so leave anything unknown blank.
+
 ## The home page
 
 The home page shows every rabbi with his portrait. To feature a rabbi large at the top, with the start of his biography, add `featured: true` to his file in `_rabbis/`. To add your logo, upload it to `assets/images/` and put its path on the `logo:` line in `_config.yml`.
