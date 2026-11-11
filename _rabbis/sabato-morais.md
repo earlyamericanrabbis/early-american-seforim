@@ -16,7 +16,13 @@ positions:
 seforim:
 - K’sav Yad of Rev. Dr. Sabato Morais
 portrait: /assets/images/rabbis/sabato-morais.jpg
+born: '1823'
+died: '1897'
+born_year: 1823
+died_year: 1897
+sources:
+- 'Instagram: @earlyamericanrabbis'
 status: draft
 ---
 
-Biography to be written.
+Rav Sabato Morais, 1823-1897. Rav of Mikveh Yisrael, Philadelphia, Pennsylvania. A strong fighter of Orthodoxy in his time, fighting along side Rabbi Isaac Leeser in the fight against the Reform movement that was decimating the Jewish population.

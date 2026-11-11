@@ -29,8 +29,11 @@ yeshivos:
 works:
 - Sefer HaMa'or
 - A Handbook for the Jewish Woman
+sources:
+- 'Instagram: @earlyamericanrabbis'
+portrait: /assets/images/rabbis/elazar-meir-priel.jpg
 status: draft
 sheet_row: 635
 ---
 
-Biography to be written.
+Rabbi Elazar Mayer Preil, 1878-1933. Rav in Trenton and Elizabeth, and Magid Shiur in RIETS. Mechaber of The Handbook for Jewish Women & Sefer HaMaor, Ksavim Nivcharim (posthumously). Father in law of Rabbi Pinchas Teit, of Elizabeth.
