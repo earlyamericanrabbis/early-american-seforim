@@ -1,0 +1,75 @@
+# The 54 parshiyos, in order. A derasha's "parsha:" must match a "name" here exactly.
+- chumash: Bereishis
+  hebrew: בראשית
+  english: Genesis
+  parshiyos:
+    - { name: "Bereishis", hebrew: "בראשית" }
+    - { name: "Noach", hebrew: "נח" }
+    - { name: "Lech Lecha", hebrew: "לך לך" }
+    - { name: "Vayeira", hebrew: "וירא" }
+    - { name: "Chayei Sarah", hebrew: "חיי שרה" }
+    - { name: "Toldos", hebrew: "תולדות" }
+    - { name: "Vayeitzei", hebrew: "ויצא" }
+    - { name: "Vayishlach", hebrew: "וישלח" }
+    - { name: "Vayeishev", hebrew: "וישב" }
+    - { name: "Mikeitz", hebrew: "מקץ" }
+    - { name: "Vayigash", hebrew: "ויגש" }
+    - { name: "Vayechi", hebrew: "ויחי" }
+- chumash: Shemos
+  hebrew: שמות
+  english: Exodus
+  parshiyos:
+    - { name: "Shemos", hebrew: "שמות" }
+    - { name: "Va'eira", hebrew: "וארא" }
+    - { name: "Bo", hebrew: "בא" }
+    - { name: "Beshalach", hebrew: "בשלח" }
+    - { name: "Yisro", hebrew: "יתרו" }
+    - { name: "Mishpatim", hebrew: "משפטים" }
+    - { name: "Terumah", hebrew: "תרומה" }
+    - { name: "Tetzaveh", hebrew: "תצוה" }
+    - { name: "Ki Sisa", hebrew: "כי תשא" }
+    - { name: "Vayakhel", hebrew: "ויקהל" }
+    - { name: "Pekudei", hebrew: "פקודי" }
+- chumash: Vayikra
+  hebrew: ויקרא
+  english: Leviticus
+  parshiyos:
+    - { name: "Vayikra", hebrew: "ויקרא" }
+    - { name: "Tzav", hebrew: "צו" }
+    - { name: "Shemini", hebrew: "שמיני" }
+    - { name: "Tazria", hebrew: "תזריע" }
+    - { name: "Metzora", hebrew: "מצורע" }
+    - { name: "Acharei Mos", hebrew: "אחרי מות" }
+    - { name: "Kedoshim", hebrew: "קדושים" }
+    - { name: "Emor", hebrew: "אמור" }
+    - { name: "Behar", hebrew: "בהר" }
+    - { name: "Bechukosai", hebrew: "בחקתי" }
+- chumash: Bamidbar
+  hebrew: במדבר
+  english: Numbers
+  parshiyos:
+    - { name: "Bamidbar", hebrew: "במדבר" }
+    - { name: "Nasso", hebrew: "נשא" }
+    - { name: "Beha'aloscha", hebrew: "בהעלתך" }
+    - { name: "Shelach", hebrew: "שלח" }
+    - { name: "Korach", hebrew: "קרח" }
+    - { name: "Chukas", hebrew: "חקת" }
+    - { name: "Balak", hebrew: "בלק" }
+    - { name: "Pinchas", hebrew: "פינחס" }
+    - { name: "Matos", hebrew: "מטות" }
+    - { name: "Masei", hebrew: "מסעי" }
+- chumash: Devarim
+  hebrew: דברים
+  english: Deuteronomy
+  parshiyos:
+    - { name: "Devarim", hebrew: "דברים" }
+    - { name: "Va'eschanan", hebrew: "ואתחנן" }
+    - { name: "Eikev", hebrew: "עקב" }
+    - { name: "Re'eh", hebrew: "ראה" }
+    - { name: "Shoftim", hebrew: "שופטים" }
+    - { name: "Ki Seitzei", hebrew: "כי תצא" }
+    - { name: "Ki Savo", hebrew: "כי תבוא" }
+    - { name: "Nitzavim", hebrew: "נצבים" }
+    - { name: "Vayeilech", hebrew: "וילך" }
+    - { name: "Ha'azinu", hebrew: "האזינו" }
+    - { name: "V'zos HaBerachah", hebrew: "וזאת הברכה" }
