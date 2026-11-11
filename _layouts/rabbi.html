@@ -15,6 +15,7 @@ layout: default
     <img class="portrait" src="{{ portrait | relative_url }}" alt="Portrait of {{ page.name }}">
     <div class="rv-id">
       <h1>{{ page.name }}</h1>
+      {% if page.also_known_as.size > 0 %}<p class="rv-aka">Also known as {{ page.also_known_as | join: ", " }}</p>{% endif %}
       {% if page.hebrew_name %}<p class="he big">{{ page.hebrew_name }}</p>{% endif %}
       {% if by or dy %}<p class="rv-years">{{ by | default: "?" }} – {{ dy | default: "?" }}</p>{% endif %}
       {% if page.yahrzeit %}<p class="rv-yahrzeit"><span>Yahrzeit</span> {{ page.yahrzeit }}</p>{% endif %}

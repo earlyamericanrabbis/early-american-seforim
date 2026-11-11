@@ -1,0 +1,309 @@
+# Editor settings for /admin (Sveltia CMS). Field names must match the site's page fields.
+backend:
+  name: github
+  repo: earlyamericanrabbis/early-american-seforim
+  branch: main
+site_url: https://earlyamericanrabbis.github.io/early-american-seforim
+display_url: https://earlyamericanrabbis.github.io/early-american-seforim
+media_folder: assets/images/rabbis
+public_folder: /assets/images/rabbis
+collections:
+- name: rabbis
+  label: Rabbis
+  label_singular: Rabbi
+  folder: _rabbis
+  create: true
+  extension: md
+  format: frontmatter
+  slug: '{{first_name}}-{{last_name}}'
+  identifier_field: name
+  summary: '{{name}}  ({{born}}–{{died}})'
+  sortable_fields:
+  - sort_name
+  - born_year
+  - died_year
+  view_filters:
+  - label: Drafts
+    field: status
+    pattern: draft
+  fields:
+  - name: name
+    label: Full name as shown on the page
+    widget: string
+    hint: e.g. Rabbi Moshe Feinstein, or Rabbi Levi Yitzchak Landman, the Tornapoler Rebbe
+  - name: first_name
+    label: First name(s)
+    widget: string
+    required: false
+  - name: last_name
+    label: Last name
+    widget: string
+    required: false
+  - name: short_name
+    label: Short name
+    widget: string
+    required: false
+    hint: e.g. Rabbi Feinstein
+  - name: sort_name
+    label: Sort name
+    widget: string
+    required: false
+    hint: Last, First — used for A–Z order
+  - name: also_known_as
+    label: Also known as
+    widget: list
+    required: false
+    hint: Other names or spellings
+  - name: hebrew_name
+    label: Hebrew name
+    widget: string
+    required: false
+  - name: born
+    label: Born
+    widget: string
+    required: false
+    hint: Year or date as you want it shown, e.g. 1895 or c. 1863
+  - name: born_year
+    label: Birth year (number only)
+    widget: number
+    value_type: int
+    required: false
+  - name: birthplace
+    label: Place of birth
+    widget: string
+    required: false
+  - name: immigrated
+    label: Came to America
+    widget: string
+    required: false
+  - name: died
+    label: Passed away
+    widget: string
+    required: false
+    hint: Year or date
+  - name: died_year
+    label: Year of death (number only)
+    widget: number
+    value_type: int
+    required: false
+  - name: deathplace
+    label: Place of death
+    widget: string
+    required: false
+  - name: yahrzeit
+    label: Yahrzeit (as shown)
+    widget: string
+    required: false
+    hint: e.g. 17th of Elul, 5663
+  - name: yahrzeit_day
+    label: Yahrzeit day (for Yahrzeits This Week)
+    widget: number
+    value_type: int
+    min: 1
+    max: 30
+    required: false
+  - name: yahrzeit_month
+    label: Yahrzeit month (for Yahrzeits This Week)
+    widget: select
+    options:
+    - Tishrei
+    - Cheshvan
+    - Kislev
+    - Teves
+    - Shevat
+    - Adar
+    - Nissan
+    - Iyar
+    - Sivan
+    - Tammuz
+    - Av
+    - Elul
+    required: false
+    hint: Use Adar for Adar I and Adar II
+  - name: yahrzeit_month_num
+    label: Yahrzeit month number (1 = Tishrei … 12 = Elul)
+    widget: number
+    value_type: int
+    min: 1
+    max: 13
+    required: false
+  - name: burial
+    label: Resting place
+    widget: string
+    required: false
+  - name: burial_plot
+    label: Plot
+    widget: string
+    required: false
+  - name: states
+    label: States
+    widget: select
+    multiple: true
+    options:
+    - AL
+    - AK
+    - AZ
+    - AR
+    - CA
+    - CO
+    - CT
+    - DC
+    - DE
+    - FL
+    - GA
+    - HI
+    - ID
+    - IL
+    - IN
+    - IA
+    - KS
+    - KY
+    - LA
+    - ME
+    - MD
+    - MA
+    - MI
+    - MN
+    - MS
+    - MO
+    - MT
+    - NE
+    - NV
+    - NH
+    - NJ
+    - NM
+    - NY
+    - NC
+    - ND
+    - OH
+    - OK
+    - OR
+    - PA
+    - RI
+    - SC
+    - SD
+    - TN
+    - TX
+    - UT
+    - VT
+    - VA
+    - WA
+    - WV
+    - WI
+    - WY
+    required: false
+    hint: Puts him on the map and in the state filter
+  - name: communities
+    label: Communities served
+    widget: list
+    required: false
+  - name: positions
+    label: Positions held
+    widget: list
+    required: false
+  - name: yeshivos
+    label: Yeshivos / learned under
+    widget: list
+    required: false
+  - name: semicha
+    label: Semicha from
+    widget: list
+    required: false
+  - name: works
+    label: Works (seforim he wrote)
+    widget: list
+    required: false
+  - name: portrait
+    label: Portrait
+    widget: image
+    required: false
+  - name: gallery
+    label: More pictures
+    widget: list
+    required: false
+    fields:
+    - name: image
+      label: Picture
+      widget: image
+    - name: caption
+      label: Caption
+      widget: string
+      required: false
+  - name: sources
+    label: Sources
+    widget: list
+    required: false
+  - name: featured
+    label: Feature on the home page
+    widget: boolean
+    required: false
+    default: false
+  - name: status
+    label: Status
+    widget: select
+    options:
+    - label: Draft (shows 'still being researched')
+      value: draft
+    - label: Final
+      value: final
+    default: draft
+    required: false
+  - name: sheet_row
+    label: Row in the master Google Sheet
+    widget: number
+    value_type: int
+    required: false
+  - name: seforim
+    label: Seforim (older field)
+    widget: list
+    required: false
+    hint: Older pages may list works here
+  - name: body
+    label: Biography
+    widget: markdown
+    required: false
+- name: site_data
+  label: In the Media
+  files:
+  - name: media
+    label: Podcasts, articles and videos
+    file: _data/media.yml
+    fields:
+    - name: items
+      label: Items
+      widget: list
+      required: false
+      summary: '{{fields.date}} · {{fields.title}}'
+      fields:
+      - name: type
+        label: Type
+        widget: select
+        options:
+        - podcast
+        - article
+        - video
+      - name: title
+        label: Title
+        widget: string
+      - name: outlet
+        label: Show / publication / channel
+        widget: string
+        required: false
+      - name: date
+        label: Date
+        widget: datetime
+        time_format: false
+        date_format: YYYY-MM-DD
+        format: YYYY-MM-DD
+      - name: url
+        label: Link
+        widget: string
+      - name: summary
+        label: Short description
+        widget: text
+        required: false
+      - name: youtube
+        label: YouTube video ID (optional)
+        widget: string
+        required: false
+        hint: The part after v= in a YouTube link

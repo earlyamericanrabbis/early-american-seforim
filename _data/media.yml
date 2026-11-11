@@ -1,19 +1,4 @@
-# In the Media — podcast appearances, articles and videos.
-# Add one entry per item, newest first doesn't matter (the page sorts by date).
-#
-# type:    podcast | article | video
-# title:   title of the episode or article
-# outlet:  show, publication or channel name
-# date:    YYYY-MM-DD
-# url:     link to it
-# youtube: (optional) the YouTube video ID, to show the video on the page
-# summary: (optional) one or two sentences
-#
-# Example (remove the # signs to use):
-# - type: podcast
-#   title: "Rediscovering America's Early Rabbis"
-#   outlet: Example Podcast
-#   date: 2026-12-01
-#   url: https://example.com/episode
-#   summary: Simon Springer on the Early American Rabbis project.
-[]
+# In the Media — edit at /admin (In the Media), or by hand here.
+# Each item: type (podcast | article | video), title, outlet, date (YYYY-MM-DD), url,
+# and optionally summary and youtube (the video ID).
+items: []

@@ -357,3 +357,5 @@ figcaption { font-size: .8rem; color: var(--ink-soft); font-style: italic; }
 .hero .dedication + h1 { margin-top: .5rem; }
 .ded-part { white-space: nowrap; display: inline-block; }
 @media (max-width: 600px) { .dedication { display: block; } .ded-part { display: block; } .ded-comma { display: none; } }
+
+.rv-aka { margin: -.2rem 0 .4rem; color: var(--ink-soft); font-style: italic; }
