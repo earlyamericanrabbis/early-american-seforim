@@ -2,10 +2,11 @@
 name: Rev. Isaac Leeser
 short_name: Rev. Leeser
 sort_name: Leeser, Isaac
-hebrew_name: יצחק ליזר
+hebrew_name: "יצחק ב\"ר אורי"
 born: December 12, 1806
 birthplace: Neuenkirchen, Westphalia
 died: February 1, 1868
+yahrzeit: "8th of Shevat, 5628"
 deathplace: Philadelphia, Pennsylvania
 positions:
   - Hazzan, Congregation Mikveh Israel, Philadelphia (1829–1850)
@@ -13,7 +14,7 @@ positions:
 communities: ["Richmond, VA", "Philadelphia, PA"]
 burial:
 burial_plot:
-portrait:
+portrait: /assets/images/rabbis/isaac-leeser.jpg
 gallery: []
 status: draft
 sources: []

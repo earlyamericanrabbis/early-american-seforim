@@ -5,7 +5,7 @@
 {%- for d in include.items -%}
   {%- assign b = site.books | where: "slug", d.book | first -%}
   {%- assign r_slug = d.rabbi | default: b.rabbi -%}
-  {%- assign r = site.rabbis | where: "slug", r_slug | first -%}
+  {%- if r_slug -%}{%- assign r = site.rabbis | where: "slug", r_slug | first -%}{%- else -%}{%- assign r = nil -%}{%- endif -%}
   <li>
     <a class="dtitle" href="{{ d.url | relative_url }}">{{ d.title }}</a>
     {%- if d.hebrew_title %} <span class="he">{{ d.hebrew_title }}</span>{% endif %}

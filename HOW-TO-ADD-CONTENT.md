@@ -20,7 +20,8 @@ Every file has a short block of details at the top, between two lines of `---`. 
 
 - A **book** names its rabbi: `rabbi: julius-l-baker` (that's the rabbi's file name, without `.md`).
 - A **derasha** names its book: `book: pri-yehudah` (the book's file name, without `.md`).
-- A **derasha** can also say its `parsha`, `occasion` and `subjects`.
+- A **derasha** can also say its `moed`, `parsha`, `occasion` and `subjects`.
+- An **anthology** (one book, many rabbis, like *Moadim in America*) has `anthology: true` and no `rabbi:`. Each derasha in it names its own rabbi: `rabbi: reuven-maier`. The derasha then also appears on that rabbi's page.
 
 The website then builds every way of browsing on its own:
 
@@ -56,6 +57,7 @@ Headstone photos, pictures of shuls and documents go under `gallery:`, each with
 ## Spelling rules that matter
 
 - **Parsha names** must match the list exactly: Bereishis, Noach, Lech Lecha, Vayeira, Chayei Sarah, Toldos, Vayeitzei, Vayishlach, Vayeishev, Mikeitz, Vayigash, Vayechi, Shemos, Va'eira, Bo, Beshalach, Yisro, Mishpatim, Terumah, Tetzaveh, Ki Sisa, Vayakhel, Pekudei, Vayikra, Tzav, Shemini, Tazria, Metzora, Acharei Mos, Kedoshim, Emor, Behar, Bechukosai, Bamidbar, Nasso, Beha'aloscha, Shelach, Korach, Chukas, Balak, Pinchas, Matos, Masei, Devarim, Va'eschanan, Eikev, Re'eh, Shoftim, Ki Seitzei, Ki Savo, Nitzavim, Vayeilech, Ha'azinu, V'zos HaBerachah. (The list lives in `_data/parshiyos.yml`.)
+- **Moed names** must match the list in `_data/moadim.yml`: Elul, Rosh Hashana, Shabbos Shuva, Yom Kippur, Sukkos, Shemini Atzeres & Simchas Torah, Chanukah, Asarah B'Teves, Tu B'Shvat, Purim, Shabbos HaGadol, Pesach, Sefiras HaOmer, Shavuos, Shiva Asar B'Tammuz & the Three Weeks, Tisha B'Av.
 - **Subjects and occasions** are free text, but stay consistent. "Shabbos" and "Shabbat" would show up as two different subjects.
 - If a value contains a colon (`:`), put it in quotation marks: `title: "Shabbos: A Sign Forever"`.
 

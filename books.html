@@ -6,14 +6,14 @@ permalink: /books/
 <div class="cards">
 {%- assign books = site.books | sort: "title" -%}
 {%- for b in books -%}
-  {%- assign r = site.rabbis | where: "slug", b.rabbi | first -%}
+  {%- if b.rabbi -%}{%- assign r = site.rabbis | where: "slug", b.rabbi | first -%}{%- else -%}{%- assign r = nil -%}{%- endif -%}
   {%- assign n = site.derashos | where: "book", b.slug | size -%}
   <a class="card book-card" href="{{ b.url | relative_url }}">
     {% if b.cover %}<img src="{{ b.cover | relative_url }}" alt="">{% else %}<span class="faux-cover"><span>{{ b.title }}</span></span>{% endif %}
     <span class="card-body">
       <strong><em>{{ b.title }}</em></strong>
       {% if b.hebrew_title %}<span class="he">{{ b.hebrew_title }}</span>{% endif %}
-      <span class="meta">{{ r.name }}</span>
+      {% if b.anthology %}<span class="meta">Anthology · {{ b.editor }}</span>{% else %}<span class="meta">{{ r.name }}</span>{% endif %}
       <span class="meta">{{ b.printed }}{% if n > 0 %}{% if b.printed %} · {% endif %}{{ n }} derash{% if n == 1 %}a{% else %}os{% endif %}{% endif %}</span>
     </span>
   </a>

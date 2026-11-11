@@ -11,7 +11,7 @@ permalink: /rabbis/
     <span class="card-body">
       <strong>{{ r.name }}</strong>
       {% if r.hebrew_name %}<span class="he">{{ r.hebrew_name }}</span>{% endif %}
-      {% if r.born or r.died %}<span class="dates">{{ r.born | default: "?" }} – {{ r.died | default: "?" }}</span>{% endif %}
+      {% if r.born or r.died %}<span class="dates">{{ r.born | default: "?" }} – {{ r.died | default: "?" }}</span>{% elsif r.yahrzeit %}<span class="dates">Yahrzeit: {{ r.yahrzeit }}</span>{% endif %}
       {% if r.communities %}<span class="meta">{{ r.communities | join: " · " }}</span>{% endif %}
     </span>
   </a>

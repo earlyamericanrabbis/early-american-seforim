@@ -14,8 +14,10 @@ layout: default
       <dl class="facts">
         {% if page.born %}<dt>Born</dt><dd>{{ page.born }}{% if page.birthplace %}, {{ page.birthplace }}{% endif %}</dd>{% endif %}
         {% if page.died %}<dt>Died</dt><dd>{{ page.died }}{% if page.deathplace %}, {{ page.deathplace }}{% endif %}</dd>{% endif %}
+        {% if page.yahrzeit %}<dt>Yahrzeit</dt><dd>{{ page.yahrzeit }}</dd>{% endif %}
         {% if page.positions and page.positions.size > 0 %}<dt>Positions</dt><dd>{% for p in page.positions %}{{ p }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}</dd>{% endif %}
         {% if page.communities and page.communities.size > 0 %}<dt>Communities</dt><dd>{{ page.communities | join: "; " }}</dd>{% endif %}
+        {% if page.seforim and page.seforim.size > 0 %}<dt>Seforim</dt><dd>{% for s in page.seforim %}<em>{{ s }}</em>{% unless forloop.last %}; {% endunless %}{% endfor %}</dd>{% endif %}
         {% if page.burial %}<dt>Buried</dt><dd>{{ page.burial }}{% if page.burial_plot %} — {{ page.burial_plot }}{% endif %}</dd>{% endif %}
       </dl>
     </div>
@@ -43,6 +45,27 @@ layout: default
   </section>
   {% endif %}
 
+  {%- assign in_anth = site.derashos | where: "rabbi", page.slug | sort: "order" -%}
+  {% if in_anth.size > 0 %}
+  <section>
+    <h2>Derashos by {{ page.short_name | default: page.name }}</h2>
+    {%- assign last_book = "" -%}
+    {% for d in in_anth %}
+      {%- if d.book != last_book -%}
+        {%- unless forloop.first %}</ul>{% endunless -%}
+        {%- assign b = site.books | where: "slug", d.book | first -%}
+        <h3 class="rabbi-sub">In <a href="{{ b.url | relative_url }}"><em>{{ b.title }}</em></a></h3>
+        <ul class="dlist">
+        {%- assign last_book = d.book -%}
+      {%- endif -%}
+      <li><a class="dtitle" href="{{ d.url | relative_url }}">{{ d.title }}</a>{% if d.hebrew_title %} <span class="he">{{ d.hebrew_title }}</span>{% endif %}
+        {% if d.moed or d.subjects.size > 0 %}<span class="meta">{{ d.moed }}{% if d.moed and d.subjects.size > 0 %} · {% endif %}{{ d.subjects | join: ", " }}</span>{% endif %}</li>
+      {%- if forloop.last %}</ul>{% endif -%}
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if books.size > 0 or in_anth.size == 0 %}
   <section>
     <h2>Seforim by {{ page.short_name | default: page.name }}</h2>
     {% if books.size == 0 %}
@@ -57,6 +80,7 @@ layout: default
       </ul>
     {% endif %}
   </section>
+  {% endif %}
 
   {% if page.sources and page.sources.size > 0 %}
   <section class="sources">

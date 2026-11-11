@@ -6,7 +6,7 @@ permalink: /search.json
 {%- for d in site.derashos -%}
   {%- assign b = site.books | where: "slug", d.book | first -%}
   {%- assign r_slug = d.rabbi | default: b.rabbi -%}
-  {%- assign r = site.rabbis | where: "slug", r_slug | first -%}
+  {%- if r_slug -%}{%- assign r = site.rabbis | where: "slug", r_slug | first -%}{%- else -%}{%- assign r = nil -%}{%- endif -%}
   {
     "title": {{ d.title | jsonify }},
     "hebrew": {{ d.hebrew_title | jsonify }},
@@ -16,6 +16,7 @@ permalink: /search.json
     "parsha": {{ d.parsha | join: ", " | jsonify }},
     "subjects": {{ d.subjects | join: ", " | jsonify }},
     "occasion": {{ d.occasion | join: ", " | jsonify }},
+    "moed": {{ d.moed | jsonify }},
     "text": {{ d.content | strip_html | normalize_whitespace | jsonify }}
   }{% unless forloop.last %},{% endunless %}
 {%- endfor -%}

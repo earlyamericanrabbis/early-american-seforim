@@ -30,10 +30,12 @@ title: Home
     <span class="way-desc">Emunah, Shabbos, chinuch, America and more</span>
     <span class="way-count">&nbsp;</span>
   </a>
-  <a class="way" href="{{ '/occasions/' | relative_url }}">
-    <span class="way-title">By Occasion</span>
-    <span class="way-desc">Yomim Tovim, bar mitzvahs, weddings, hespedim</span>
-    <span class="way-count">&nbsp;</span>
+  {%- assign n_moed = 0 -%}
+  {%- for m in site.data.moadim -%}{%- assign c = site.derashos | where: "moed", m.name | size -%}{%- if c > 0 -%}{%- assign n_moed = n_moed | plus: 1 -%}{%- endif -%}{%- endfor -%}
+  <a class="way" href="{{ '/moadim/' | relative_url }}">
+    <span class="way-title">By Moed</span>
+    <span class="way-desc">Rosh Hashana, Yom Kippur, Sukkos, Pesach and every Yom Tov of the year</span>
+    <span class="way-count">{{ n_moed }} moed{% if n_moed != 1 %}im{% endif %} so far</span>
   </a>
   <a class="way" href="{{ '/derashos/' | relative_url }}">
     <span class="way-title">Every Derasha</span>

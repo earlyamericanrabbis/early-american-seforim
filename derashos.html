@@ -9,9 +9,9 @@ permalink: /derashos/
 {% for b in books %}
   {%- assign items = site.derashos | where: "book", b.slug | sort: "order" -%}
   {% if items.size > 0 %}
-  {%- assign r = site.rabbis | where: "slug", b.rabbi | first -%}
+  {%- if b.rabbi -%}{%- assign r = site.rabbis | where: "slug", b.rabbi | first -%}{%- else -%}{%- assign r = nil -%}{%- endif -%}
   <section class="group filterable">
-    <h3><a href="{{ b.url | relative_url }}"><em>{{ b.title }}</em></a> <span class="meta">{{ r.name }}</span></h3>
+    <h3><a href="{{ b.url | relative_url }}"><em>{{ b.title }}</em></a> <span class="meta">{% if b.anthology %}Anthology{% else %}{{ r.name }}{% endif %}</span></h3>
     {% include derasha-list.html items=items %}
   </section>
   {% endif %}

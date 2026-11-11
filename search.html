@@ -19,7 +19,7 @@ permalink: /search/
 
   fetch('{{ "/search.json" | relative_url }}').then(function (r) { return r.json(); }).then(function (json) {
     data = json.map(function (d) {
-      d._hay = norm([d.title, d.hebrew, d.rabbi, d.book, d.parsha, d.subjects, d.occasion, d.text].join(' '));
+      d._hay = norm([d.title, d.hebrew, d.rabbi, d.book, d.parsha, d.subjects, d.occasion, d.moed, d.text].join(' '));
       d._text = norm(d.text);
       return d;
     });

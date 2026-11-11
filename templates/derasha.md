@@ -2,7 +2,9 @@
 title: "Title of the Derasha in English"
 hebrew_title:                     # optional, e.g. דרוש לשבת הגדול
 book: name-of-the-book-file       # the book's file name WITHOUT .md, e.g. pri-yehudah
+rabbi:                            # ONLY for anthologies: the rabbi's file name, e.g. reuven-maier
 order: 1                          # position in the book: 1, 2, 3 ...
+moed:                             # optional, spelled as on the Moadim list, e.g. Rosh Hashana, Pesach
 parsha: Bereishis                 # spelled exactly as on the Parshiyos list; leave blank if none
                                   # two parshiyos? write: [Vayakhel, Pekudei]
 occasion:                         # optional, e.g. Rosh Hashanah, or [Shabbos HaGadol, Pesach]

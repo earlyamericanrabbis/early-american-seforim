@@ -1,0 +1,39 @@
+---
+title: "Rosh Hashana, Part 3"
+hebrew_title: "ג"
+book: moadim-in-america-rosh-hashana
+rabbi: shmuel-menachem-halevi-fine
+order: 16
+moed: "Rosh Hashana"
+parsha: 
+occasion: 
+subjects: ["Shofar", "Teshuvah"]
+source: "Eisan Shmuel"
+---
+*Cry with a throat, do not withhold. Like a shofar raise your voice, and tell to my people their transgression and to the house of Jacob their sins* (Yeshayahu 58).
+
+What is the rhetoric of the verse "*like a shofar*" raise your voice? Why specifically like a shofar? And in the Midrash it is brought in *Ketav Sofer* in the collections: like the shofar of Rosh Hashanah, like the shofar of the giving of the Torah. This Midrash also requires explanation.
+
+Behold the matter of blowing the shofar on Rosh Hashanah is brought in the Rambam, Laws of Repentance chapter 3, and these are his words:
+
+"*Although the blowing of the shofar on Rosh Hashanah is a decree of the Scripture, an allusion there is in it, that is to say, awake sleepers from your sleep, rouse yourselves slumberers from your slumber, and search in your deeds and return in repentance and remember your Creator, those who forget the truth in the vanities of the time and err all their year in vanity and void which shall not profit and shall not save. Look to your souls and improve your ways and your actions, and let each one of you leave his evil way and his thought which is not good.*"
+
+Also in the giving of the Torah, the shofar took a place at the head: "*And it was on the third day when it was morning, and there were voices and lightnings and a heavy cloud upon the mountain and a voice of a shofar very strong*" (Yisro, 5th portion), and at the end of the portion: "*And it was, the voice of the shofar was going and getting very strong.*"
+
+And in the 7th portion: "*And all the people see the voices and the torches and the voice of the shofar,*" and in the future redemption it is written: "*And it shall be on that day, it shall be blown with a great shofar, and those lost in the land of Assyria shall come,*" etc.; "*All dwellers of the world and inhabitants of the earth, as a banner of mountains is raised you shall come, and as a shofar is blown you shall hear.*" What is the matter of the shofar?
+
+Behold to tell ethical rebuke to the people of Israel, this is a difficult thing. For "*who hardened his heart against them and remained whole?*" And who is for us greater than Moses our teacher, master of the prophets, who so much toiled and suffered for them, and if he only said to them "*Hear now, the rebels,*" see what befell him; and so Yeshayahu the prophet and so Elijah. And these are the words of the Yalkut Chukat):
+
+*"Israel were likened to a nut, as it is said, 'To the garden of nuts I went down'; the nut was smooth, whoever is not skilled to climb it, immediately falls he falls, for one must watch that he does not fall from it. So every person who serves Israel must guard himself so that he does not take his due from under their hands. Moses said: "Hear now, the rebels," and it was said: "Therefore you shall not bring this congregation"; Yeshayahu said: "And in the midst of a people of unclean lips I dwell," immediately it is written: "and in his hand a coal"; what is ritzpah? Rabbi Samuel bar Nachman said: The mouth ran, for he spoke slander against my children; Elijah said: "For the children of Israel have forsaken Your covenant," and it was said to him: "and Elisha son of Shaphat you shall anoint for a prophet in your stead"; He said to him: The Holy One, Blessed be He, does not want one who speaks slander against Israel, as it is written: "Do not look at me, that I am swarthy."*
+
+And behold Yeshayahu the prophet, who was punished for what he called the people of Israel "*an unclean people*" when he came to tell them ethical rebuke, was very careful in his language, and reminds them of the matter of the shofar, for the shofar of Rosh Hashanah alludes to us regarding repentance and that we should improve our way and make better our deeds, and this is the explanation of the Midrash: "*like the shofar of Rosh Hashanah, like the shofar of the giving of the Torah.*"
+
+Behold, two types of transgressions there are, and corresponding to them there are two types of rebuke. There is a transgression which is inherently a great transgression, and even a simple and common man, if he does it, it shall be reckoned to him as a sin; and there is another transgression that if only an important man does it, then it shall be reckoned to him as a sin, but if another man does it, then it is nothing, and as we say (Yoma 86): What is the case of desecration of the Name? Rabbi Yohanan said: For example, I, who take meat and do not pay the money immediately—specifically Rabbi Yohanan and not another man.
+
+And as with private individuals, so with entire nations. The people of the children of Israel who stood at a high level, as it is written: "*And you shall be for Me a treasure from among all the nations,*" and then at the standing of Mount Sinai, are we able to estimate that scene, magnificent in holiness; the God of the world descended in His glory to teach to His people Torah and commandments, and He connected and married and took Israel for a people, and called them children to the Omnipresent, and endeared them with all types of affection, and at that time the people of Israel stood upon the height of the peak of success and happiness that no nation in the world merited.
+
+And now, alas, what has befallen us. There has weakened among us the deep recognition in the Torah, the recognition in the ethics of Judaism, the recognition in the supreme human, the recognition in the purpose of this world—for what and why the soul descended below—the recognition in the purpose of the people of Israel to be a light to nations and to repair the world in the kingdom of the Almighty, the necessity to strive for the life of souls and eternity and the rest of the virtues and the treasures that are in our Torah; and this is truly a frightening spectacle that tears and searches kidneys and heart, until there is no strength to bear all these in silence.
+
+And behold Yeshayahu the prophet in his desire to tell ethics to the people of Israel, to rouse them to repentance and good deeds, to an accounting of the soul and to an awakening of the spirit, to understand their own value, their goal in life, and their purpose among the nations, reminded them of the matter of the giving of the Torah, the shofar that took a place at the head in the giving of the Torah. And in this, it is as if he wanted to rouse them, to encourage them, to urge them, to make them understand, to teach them, and to enlighten them as to who they are. Their lineage and their drawing near to God. And to act upon them in two ways: first, that they shall not walk bowed as despondent people and shall not fall in their spirit. And second, that they need to know for what goal they were created, to be a light to nations, to teach those who stray understanding—"*this people I formed for Myself, My praise they shall tell*"—and all these things shall be remembered in the matter of the shofar.
+
+And this is the explanation in the Midrash, like the shofar of Rosh Hashanah, that the shofar is a rouser to repentance and good deeds; like the shofar of the giving of the Torah, he needs to remind them of the shofar of the giving of the Torah, that happy time, when they were at the upper level, and now they have descended wonders, and this shall be for them a great ethical rebuke. And for the time to come we hope also that "*all wickedness entirely like smoke shall vanish, and You shall remove the dominion of arrogance from the earth*", and all the nations shall call in the name of Hashem and "*Hashem shall be for king over all the earth, Hashem is one and His name is one*", and this is the shofar of the time to come.
