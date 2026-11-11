@@ -34,7 +34,7 @@ layout: default
 
   <div class="tags">
     {% if page.moed %}<a class="tag tag-moed" href="{{ '/moadim/' | relative_url }}#{{ page.moed | slugify }}">{{ page.moed }}</a>{% endif %}
-    {% for p in page.parsha %}<a class="tag tag-parsha" href="{{ '/parshiyos/' | relative_url }}#{{ p | slugify }}">Parshas {{ p }}</a>{% endfor %}
+    {% for p in page.parsha %}{%- assign ps = p | slugify -%}<a class="tag tag-parsha" href="{{ '/parshiyos/' | append: ps | append: '/' | relative_url }}">Parshas {{ p }}</a>{% endfor %}
     {% for o in page.occasion %}<a class="tag tag-occasion" href="{{ '/occasions/' | relative_url }}#{{ o | slugify }}">{{ o }}</a>{% endfor %}
     {% for s in page.subjects %}<a class="tag" href="{{ '/subjects/' | relative_url }}#{{ s | slugify }}">{{ s }}</a>{% endfor %}
   </div>

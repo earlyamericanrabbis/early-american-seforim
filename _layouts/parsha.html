@@ -1,0 +1,44 @@
+---
+layout: default
+---
+{%- assign all = "" | split: "" -%}
+{%- for c in site.data.parshiyos -%}{%- for p in c.parshiyos -%}{%- assign all = all | push: p.name -%}{%- if p.name == page.parsha -%}{%- assign chumash = c -%}{%- assign heb = p.hebrew -%}{%- endif -%}{%- endfor -%}{%- endfor -%}
+{%- for n in all -%}{%- if n == page.parsha -%}{%- assign idx = forloop.index0 -%}{%- endif -%}{%- endfor -%}
+{%- assign prev_i = idx | minus: 1 -%}{%- assign next_i = idx | plus: 1 -%}
+{%- if idx > 0 -%}{%- assign prev = all[prev_i] -%}{%- endif -%}
+{%- assign next = all[next_i] -%}
+{%- assign prev_slug = prev | slugify -%}{%- assign next_slug = next | slugify -%}
+{%- assign items = site.derashos | where: "parsha", page.parsha -%}
+<article class="parsha-page">
+  <p class="crumbs"><a href="{{ '/parshiyos/' | relative_url }}">Parshiyos</a> › <a href="{{ '/parshiyos/' | relative_url }}#{{ chumash.chumash | slugify }}">Sefer {{ chumash.chumash }}</a> ›</p>
+  <h1>Parshas {{ page.parsha }} <span class="he">{{ heb }}</span></h1>
+  <p class="meta">{{ items.size }} derash{% if items.size == 1 %}a{% else %}os{% endif %} on this parsha</p>
+
+  {% if items.size == 0 %}
+    <p class="empty">No derashos on this parsha yet.</p>
+  {% else %}
+    {%- assign books = site.books | sort: "title" -%}
+    {% for b in books %}
+      {%- assign bi = items | where: "book", b.slug | sort: "order" -%}
+      {% if bi.size > 0 %}
+        {%- assign r = nil -%}{%- if b.rabbi -%}{%- assign r = site.rabbis | where: "slug", b.rabbi | first -%}{%- endif -%}
+        <section class="group">
+          <h2 class="book-sub"><a href="{{ b.url | relative_url }}"><em>{{ b.title }}</em></a>{% if r %} <span class="meta">{{ r.name }}</span>{% endif %}</h2>
+          <ul class="dlist">
+          {% for d in bi %}
+            {%- assign dr = r -%}{%- if d.rabbi -%}{%- assign dr = site.rabbis | where: "slug", d.rabbi | first -%}{%- endif -%}
+            <li><a class="dtitle" href="{{ d.url | relative_url }}">{{ d.title }}</a>{% if d.hebrew_title and d.hebrew_title != heb %} <span class="he">{{ d.hebrew_title }}</span>{% endif %}
+              <span class="meta">{% if b.anthology %}{{ dr.name }}{% if d.subjects.size > 0 %} · {% endif %}{% endif %}{{ d.subjects | join: ", " }}</span></li>
+          {% endfor %}
+          </ul>
+        </section>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  <nav class="pager">
+    {% if prev %}<a class="prev" href="{{ '/parshiyos/' | append: prev_slug | append: '/' | relative_url }}">‹ Parshas {{ prev }}</a>{% else %}<span></span>{% endif %}
+    <a class="up" href="{{ '/parshiyos/' | relative_url }}">All parshiyos</a>
+    {% if next %}<a class="next" href="{{ '/parshiyos/' | append: next_slug | append: '/' | relative_url }}">Parshas {{ next }} ›</a>{% else %}<span></span>{% endif %}
+  </nav>
+</article>

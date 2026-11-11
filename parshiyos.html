@@ -3,32 +3,21 @@ title: Parshiyos
 permalink: /parshiyos/
 ---
 <h1>Derashos by Parsha</h1>
-<p class="lede">Choose a parsha to see every derasha on it, from every rabbi in the library.</p>
+<p class="lede">Choose a parsha to see every derasha on it, from every rabbi and every book in the library.</p>
 
 {% for c in site.data.parshiyos %}
-<section class="chumash">
-  <h2>{{ c.chumash }} <span class="he">{{ c.hebrew }}</span> <span class="meta">{{ c.english }}</span></h2>
-  <div class="chips">
+<section class="chumash" id="{{ c.chumash | slugify }}">
+  <h2>Sefer {{ c.chumash }} <span class="he">{{ c.hebrew }}</span> <span class="meta">{{ c.english }}</span></h2>
+  <div class="parsha-grid">
     {% for p in c.parshiyos %}
       {%- assign n = site.derashos | where: "parsha", p.name | size -%}
-      <a class="chip{% if n == 0 %} chip-empty{% endif %}" href="#{{ p.name | slugify }}">{{ p.name }} <span class="he">{{ p.hebrew }}</span>{% if n > 0 %} <b>{{ n }}</b>{% endif %}</a>
+      {%- assign slug = p.name | slugify -%}
+      <a class="parsha-card{% if n == 0 %} is-empty{% endif %}" href="{{ '/parshiyos/' | append: slug | append: '/' | relative_url }}">
+        <span class="pc-name">{{ p.name }}</span>
+        <span class="he pc-he">{{ p.hebrew }}</span>
+        <span class="pc-count">{% if n > 0 %}{{ n }} derash{% if n == 1 %}a{% else %}os{% endif %}{% else %}none yet{% endif %}</span>
+      </a>
     {% endfor %}
   </div>
 </section>
-{% endfor %}
-
-<hr>
-
-{% for c in site.data.parshiyos %}
-  {% for p in c.parshiyos %}
-    {%- assign items = site.derashos | where: "parsha", p.name -%}
-    <section class="group" id="{{ p.name | slugify }}">
-      <h3>Parshas {{ p.name }} <span class="he">{{ p.hebrew }}</span></h3>
-      {% if items.size > 0 %}
-        {% include derasha-list.html items=items %}
-      {% else %}
-        <p class="empty">No derashos on this parsha yet.</p>
-      {% endif %}
-    </section>
-  {% endfor %}
 {% endfor %}

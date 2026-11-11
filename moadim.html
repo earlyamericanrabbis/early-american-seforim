@@ -8,12 +8,13 @@ permalink: /moadim/
 <div class="chips">
   {% for m in site.data.moadim %}
     {%- assign n = site.derashos | where: "moed", m.name | size -%}
-    <a class="chip{% if n == 0 %} chip-empty{% endif %}" href="#{{ m.name | slugify }}">{{ m.name }} <span class="he">{{ m.hebrew }}</span>{% if n > 0 %} <b>{{ n }}</b>{% endif %}</a>
+    {% if n > 0 %}<a class="chip" href="#{{ m.name | slugify }}">{{ m.name }} <span class="he">{{ m.hebrew }}</span> <b>{{ n }}</b></a>{% else %}<span class="chip chip-empty">{{ m.name }} <span class="he">{{ m.hebrew }}</span></span>{% endif %}
   {% endfor %}
 </div>
 <p class="meta">Looking for bar mitzvahs, weddings, hespedim and other occasions? See <a href="{{ '/occasions/' | relative_url }}">Occasions</a>.</p>
 
 <hr>
+{% include focus.html %}
 
 {% for m in site.data.moadim %}
   {%- assign items = site.derashos | where: "moed", m.name | sort: "order" -%}

@@ -137,3 +137,16 @@ figcaption { font-size: .8rem; color: var(--ink-soft); font-style: italic; }
 .foreword { margin-top: 2rem; }
 .byline .he { text-align: left; }
 .lede { margin-left: 0; }
+/* Parshiyos grid */
+.parsha-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .6rem; }
+.parsha-card { display: flex; flex-direction: column; gap: .05rem; padding: .6rem .8rem; background: #fffaf0; border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: 4px; color: var(--ink); }
+.parsha-card:hover { text-decoration: none; border-color: var(--gold); box-shadow: 0 2px 8px rgba(60,40,20,.08); }
+.pc-name { font-weight: 600; color: var(--accent); }
+.pc-he { text-align: left; font-size: 1.05rem; }
+.pc-count { font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; color: var(--gold); }
+.parsha-card.is-empty { opacity: .55; border-left-color: var(--rule); }
+.book-sub { font-size: 1.2rem; margin-top: 1.8rem; }
+.book-sub .meta { font-weight: 400; font-size: .9rem; }
+.chip b { margin-inline-start: .25rem; direction: ltr; unicode-bidi: isolate; }
+.focus-bar { background: #fbf3dc; border-left: 4px solid var(--gold); padding: .5rem .9rem; display: flex; justify-content: space-between; gap: 1rem; scroll-margin-top: .5rem; }
+.focus-bar[hidden] { display: none; }

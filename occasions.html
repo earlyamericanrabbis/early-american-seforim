@@ -17,6 +17,7 @@ permalink: /occasions/
     {% endfor %}
   </div>
   <hr>
+  {% include focus.html %}
   {% for o in all %}
     {%- assign items = site.derashos | where: "occasion", o -%}
     <section class="group" id="{{ o | slugify }}">

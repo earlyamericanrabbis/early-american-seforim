@@ -1,0 +1,27 @@
+<p class="focus-bar" hidden><span class="focus-label"></span> <a href="#" class="focus-all">Show all</a></p>
+<script>
+/* Clicking a chip shows only that group; "Show all" (or no #hash) shows everything. */
+document.addEventListener('DOMContentLoaded', function () {
+  var groups = document.querySelectorAll('section.group[id]');
+  var bar = document.querySelector('.focus-bar');
+  function apply() {
+    var id = decodeURIComponent(location.hash.slice(1));
+    var target = id && document.getElementById(id);
+    if (!target || !target.matches('section.group')) {
+      groups.forEach(function (g) { g.hidden = false; });
+      bar.hidden = true;
+      return;
+    }
+    groups.forEach(function (g) { g.hidden = (g !== target); });
+    var h = target.querySelector('h2, h3');
+    bar.querySelector('.focus-label').textContent = 'Showing: ' + (h ? h.textContent.replace(/\s+/g, ' ').trim() : id);
+    bar.hidden = false;
+    bar.scrollIntoView({ block: 'start' });
+  }
+  bar.querySelector('.focus-all').addEventListener('click', function (e) {
+    e.preventDefault(); history.pushState('', document.title, location.pathname); apply();
+  });
+  window.addEventListener('hashchange', apply);
+  apply();
+});
+</script>
