@@ -1,0 +1,40 @@
+---
+title: Moadim
+permalink: /moadim/
+---
+<h1>Derashos on the Moadim</h1>
+<p class="lede">The Yomim Tovim and special times of the Jewish year, from Elul through Tisha B'Av.</p>
+
+<div class="chips">
+  {% for m in site.data.moadim %}
+    {%- assign n = site.derashos | where: "moed", m.name | size -%}
+    <a class="chip{% if n == 0 %} chip-empty{% endif %}" href="#{{ m.name | slugify }}">{{ m.name }} <span class="he">{{ m.hebrew }}</span>{% if n > 0 %} <b>{{ n }}</b>{% endif %}</a>
+  {% endfor %}
+</div>
+<p class="meta">Looking for bar mitzvahs, weddings, hespedim and other occasions? See <a href="{{ '/occasions/' | relative_url }}">Occasions</a>.</p>
+
+<hr>
+
+{% for m in site.data.moadim %}
+  {%- assign items = site.derashos | where: "moed", m.name | sort: "order" -%}
+  {% if items.size > 0 %}
+  <section class="group" id="{{ m.name | slugify }}">
+    <h2>{{ m.name }} <span class="he">{{ m.hebrew }}</span> <span class="meta">{{ items.size }} derash{% if items.size == 1 %}a{% else %}os{% endif %}</span></h2>
+    {%- assign last_rabbi = "" -%}
+    {% for d in items %}
+      {%- assign b = site.books | where: "slug", d.book | first -%}
+      {%- assign r_slug = d.rabbi | default: b.rabbi -%}
+      {%- if r_slug != last_rabbi -%}
+        {%- unless forloop.first %}</ul>{% endunless -%}
+        {%- assign r = site.rabbis | where: "slug", r_slug | first -%}
+        <h3 class="rabbi-sub"><a href="{{ r.url | relative_url }}">{{ r.name }}</a></h3>
+        <ul class="dlist">
+        {%- assign last_rabbi = r_slug -%}
+      {%- endif -%}
+      <li><a class="dtitle" href="{{ d.url | relative_url }}">{{ d.title }}</a>{% if d.hebrew_title %} <span class="he">{{ d.hebrew_title }}</span>{% endif %}
+        <span class="meta"><em>{{ b.title }}</em>{% if d.subjects.size > 0 %} · {{ d.subjects | join: ", " }}{% endif %}</span></li>
+      {%- if forloop.last %}</ul>{% endif -%}
+    {% endfor %}
+  </section>
+  {% endif %}
+{% endfor %}
