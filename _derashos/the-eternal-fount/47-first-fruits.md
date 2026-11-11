@@ -1,0 +1,44 @@
+---
+title: "First Fruits"
+hebrew_title: "כי תבוא"
+book: "the-eternal-fount"
+order: 47
+parsha: "Ki Savo"
+moed:
+occasion:
+verses: "Deuteronomy xxvi-xxix, 8"
+subjects:
+---
+<span dir="rtl">כי תבוא אל הארץ</span>—<span dir="rtl">עשה מצוה שבשכרה תכנס לארץ</span> “When thou art come in into the land’ — perform such righteous commands as may bring thee the reward of entry into the land” (Sifri). Jewish nationality draws its chief sustenance from its religion. God made Israel His chosen people, in order that they might carry into life the lofty ideals of His Torah, and thus serve as example for all other nations. The ultimate functions of the people of Israel are indicated in the Law of Israel; and since many of the divine commands are bound up with the land and cannot be performed in alien territories, God also provided a Land of Israel, in which the nation could live its own unique life.
+
+*Bikkurim* — offering of first fruits to the Lord — is one of the commands operable only in Eretz Israel. The Bible speaks: <span dir="rtl">ראשית בכורי אדמתך תביא בית</span> “The first of the first fruits of thy ground thou shalt bring unto the house of the Eternal thy God” (Exodus xxiii, 19). These must be fruits of their own ground, excluding all alien soil, which is not theirs. Thus the priests, who are given the first fruits, are forbidden to eat them outside the Holy City.
+
+In Albo’s Ikkarim we read that the main thought of *bikkurim* is <span dir="rtl">לנטע בלב כל אחד מישראל את ההכרה שמה שיש לו מד</span>’ <span dir="rtl">ניתן לו</span> “to implant within the heart of every Jew the recognition that all he possesses has been given him by the Lord.” To be able to work one must have health, and health comes from the Lord; to be able to produce, the soil must have rain in its season, and this is in the hand of the All-highest; wealth is generally the result of happy circumstances, and all change of circumstance is divinely appointed. The custom of bringing the first fruits is designed to awaken this understanding in every Jewish breast, so that each will be impelled to perform his full duty to Judaism and his community. Of a man with God in his heart, who offers Him his first fruits, we are assured that he will give his terumah to the priest, his first tithe to the Levite, and his second tithe to the poor. The spiritual and economic needs of the community will be granted the proper share of his possessions, given him by the Master of the Universe.
+
+Pious old Jews, after reciting the *habdalah* rite on the passing of the Sabbath, would pour a little of the ceremonial wine on the table in which to extinguish the lighted taper. Then they would dip their fingertips in the same wine and moisten their eyes and pockets therewith. Thus did my father explain the custom to me: “On the Sabbath the Jew is more conscious of his God and his people; he is too occupied during the week to think of higher matters. Hence do we take some of the wine in which the light for the expiring Sabbath has been extinguished, and wet eyes and pockets — to symbolize our desire that even on week days our eyes may turn to the holiness of God, and that our pockets may be filled with the returns of honest labor.”
+
+<span dir="rtl">כיצד מפרישים הבכורים</span> “How do we set apart the first fruits?” asks the Mishnah (Bikkurim III).
+
+<span dir="rtl">יורד אדם בתוך שדהו ורואה תאנה שבכרה, אשכול שבכר, רמון שבכר, קושרו בגמי ואומר, הרי אלו בכורים</span>
+
+“When a man goes into his fields and sees a fig that has ripened, a ripe cluster of grapes, or a matured pomegranate, he must bind them with a cord and cry, These are first fruits to the Lord” (Bikkurim III). A Jew must not wait until all his fruits are ready to eat, and then give fulsomely to spiritual and charitable ends. Even before he knows how copiously he will reap, he must have God in mind; this alone will bring him luck and riches. Such conduct raises him above all other creatures, which care only for themselves and have no thought beyond satisfying their own immediate desires.
+
+Israelites knew well how to estimate the spiritual value of *bikkurim*, which they would transport to Jerusalem with great éclat. The Mishnah describes the grandiose procession. All the villagers of a given district assembled in their chief town, where they would spend the night sleeping in the streets. In the morning their leader would cry out, <span dir="rtl">קומו ונעלה אל בית ה</span>’ <span dir="rtl">אלקינו</span> “Arise, and let us go up to the house of the Lord our God!”
+
+<span dir="rtl">הגיעו להר הבית אפילו המלך נוטל הסל על כתפו ונכנס</span> “When they reached the Temple, even the king had to place his basket on his shoulder and enter the court” (Bikkurim III).
+
+Dr. M. Lazarus, in his “The Ethics of Judaism,” shows that the chief motive of Jewish religious ceremonies is subjection to the Godhead. In the Temple court all are alike — king and rabble are given the same recognition. The Levites met all comers with the psalm, <span dir="rtl">ארוממך ה</span>’ <span dir="rtl">כי דליתני</span> “I will extol Thee, O Lord, for Thou hast lifted me up” (Psalms xxx, 2). It is on the basis of the *bikkurim* concept that Israel merits the title of chosen people, for only the Jews possess such unique and outstanding principles.
+
+## Individual Offering
+
+<span dir="rtl">ובאת אל-הכהן</span> “And thou shalt go unto the priest (thyself)” (xxvi, 3) to bring the first fruits of thy fields; one could not appoint a messenger for that purpose. <span dir="rtl">לא תחא תורתי עליכם חביבה כבת בוגרת, לכנוס אותה אצל מי שמוצא</span> “Let not my Torah be unto you as a grown daughter, whom you wish to bestow upon the first available groom” (Deuteronomy Rabbah 7).
+
+There is wisdom and cleverness in this comparison. Though one love a daughter as one’s own life, yet there is every desire to marry her off as soon as possible. There are Jews who deeply esteem the Torah, but prefer that others assume its care. They are engrossed in their personal affairs, and seek an agent to perform their own duties toward people and Torah for them — a rabbi, communal leader, or other social factotum. This class is largely to be found among the wealthy, who often believe that membership in a congregation, Hebrew school, or charitable federation, fulfills every duty to Torah, to community, or to nation. It is expected by one of these that the rabbi, teacher, or communal worker whom his money supports shall serve God for him and maintain His precepts; he himself is too busy with his affairs, and must be free. To such does the Midrash address itself: Let not the Torah be unto you as a grown daughter, whom you wish to bestow upon another. You yourself must come to the priest, and conduct yourself in full accord with Jewish law.
+
+<span dir="rtl">בערתי הקדש מן הבית</span> “I have put away the hallowed things out of mine house” (xxvi, 13). Isaac Abrabanel explained why in offering first fruits or tithes one must make open declaration in the Temple that one has complied with the commandment — required of no other biblical command. “These fruits are like ‘money that has no claimants.’ They are difficult of collection, and one may readily slip up in the process. But when the law requires an open declaration of performance, it is certain that each person will do the thing as is proper.” Nathan Straus once complained, “How revolting is publicity. However, one cannot avoid it in a campaign for charity. Our rich men will not give, unless their benefactions are heralded!”
+
+<span dir="rtl">ולא נתתי ממנו למת</span> “Neither have I given aught thereof for the dead” (14). There are Jews — so remarks Rabbi Amiel of Tel Aviv in his *Derashot el-Ami* — who turn to Judaism only when they mourn for the dead. We know the common types of *kaddish* and *jahrzeit* Jews, who ordinarily are aloof from Jewry and its basic interests. The only time they recall their origin and their duties to God and people is following the passing of a member of their families. In saying that the Temple donor must aver that he has not given thereof for the dead, the Torah declares itself a doctrine for the living and not for the dead.
+
+<span dir="rtl">כל מכה אשר לא כתובה</span>—<span dir="rtl">זו מיתת צדיקים</span> “God will preserve thee from every calamity including those not written in the Torah — this means the death of the righteous” (Rashi). The passing of great men is a grievous loss to the people. If Jews do not properly conduct themselves, they cannot retain their great men, who depart before their time.
+
+Once Rabbi Shachor of Boston was requested to deliver the eulogy over a prominent temple member, after the temple rabbi had read a prepared address. “I had thought,” he said to me, “that the death of a righteous man is one of the calamities that is not written down; I see, however, from my colleague’s efforts, that it may be a calamity that is written down!”

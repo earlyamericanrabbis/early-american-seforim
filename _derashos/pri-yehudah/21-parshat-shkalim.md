@@ -1,0 +1,29 @@
+---
+title: "Parshat Sh’kalim"
+hebrew_title:
+book: "pri-yehudah"
+order: 21
+parsha:
+moed:
+occasion: ["Parshas Shekalim"]
+subjects: ["Tzedakah"]
+---
+“When thou takest the sum of the children of Israel according to their muster, then shall they give every man a ransom for his soul unto the Eternal, when thou musterest them that there be no calamity among them, when thou musterest them. This they shall give, every one that passeth among them that are mustered, the one half of a shekel after the shekel of holiness: a shekel is twenty gerahs: a half of a shekel shall be the heave offering of the Eternal” (Exodus XXX:11-14).
+
+In the text the words “this they shall give” denote: God showed him (Moses) a kind of a fiery coin that He took out from under His chair of glory, the weight of which was half a shekel and said to him, “like this shall they give,” (Jer. Shekalim 1, 9; Tanch.).
+
+This parshah teaches us how to give charity or rather “TZEDAKA,” righteousness. There is quite a difference between charity and TZEDAKAH. One can be very charitable, but far from doing it righteously. — In the very process of doing charitable work, trying to help his fellowman, one can at the same time destroy the recipient’s honor and his dignity. This is worse than killing him. A man who avoids helping the needy is not as sinful as one who does help the forlorn a bit, but by doing so removes from the destitute whatever bit of self-respect he had. To die of hunger for food is not as horrible as perishing because of the destruction of innate honor.
+
+The United States of America gives away billions to help many peoples in the world but, with all these gestures of friendship, its citizens are still called “the ugly American.” The reason is simple. The poor man does not hate the rich one because of envy. No! It is because the rich man uses his money ostensibly to help the needy, but actually because this deed enables him to boast about qualities he does not possess. The fortunate possessor of wealth will often attribute his success to his wisdom, and clear thinking, characteristics which are far above the poor unfortunate one who needs his assistance. Therefore, “GMILUT CHASADIM,” giving a loan, is greater than giving charity, for with a loan there is repayment and much less chance of hurting some poor man’s feelings. When a rich man purchases his honor for money, he is disliked for it. When he gets his seat at the “MIZRACH WALL” because he has money enough to donate more than anyone else, he is hated for it.
+
+“And if thy brother be waxen poor, and fallen in decay with thee, then thou shalt relieve him; yea, though he be a stranger, or a sojourner; that he may live with thee” (Leviticus XXV:35). — Notice the words “and fallen in decay with thee,” which means that you must consider yourself the cause for his poverty. — Give him a living wage, let him earn his livelihood, instead of giving him gifts or charity. Scripture says “V’HECHEZAKTA BO,” “strengthen him.” Do not degrade him when you help him. “TZEDAKAH,” righteousness, and not charity, is the call of the Torah.
+
+According to the Torah teaching, one should feel when he gives to the poor man as he feels when he gives to a famous man who does not need his help — that it is an honor for the giver that the recipient has accepted his gift. In doing it this way, the giver actually is a receiver; for he has been honored by the fact that his gift has been accepted.
+
+“Speak unto the children of Israel, that they take Me a heave offering” (Exodus XXV:2); scripture uses the word “V’YIKCHU,” “they shall take,” instead of the word “V’YITNU,” “and they shall give.” That is to point out that the giver must always feel that he is the receiver.
+
+God showed Moses a type of a fiery coin and said to him, “KAZEH YITNU,” “like this shall they give.” Fire is known to have two qualities. One is the destructive quality, that can ravage everything with which it comes in contact. The other is the beneficient quality. It is the greatest factor in the production of energy which is necessary for our life and progress. It is only a matter of using fire properly and in the proper place and time. — Yes! Fire can build and fire can destroy. So it is with helping our fellowman. We must always take care that in the process of helping, we do not destroy.
+
+Scripture says “Give one half of a shekel.” Why not a whole shekel? This is to indicate that, having given does not mean that man has reached the totality of a human being. He is just one half, and it takes the other half to make the whole. One cannot live alone in this world. Even the poor man may have something to contribute to humanity. The text uses the words: “KOFER NAFSHO,” “they shall give a ransom for his soul.” In another place we find: “that when a man’s ox kills a man or a woman then shall he give for the ransom of his soul whatsoever is set upon him” (Exodus XXI:30). — Here too, when one gives charity, he must feel as though he redeems himself from some wrong he has committed. In other words, he must always think that he is at fault when the other is poor. “KI YAMUCH ACHICHA IMACH,” “and if thy brother be waxen poor, and fallen in decay with thee.” Yes! Blame yourself for it. Look upon the coin that you give to the needy as if it were made of fire and you have to be very careful not to destroy with it. — The fiery coin that God showed to Moses came from under God’s chair of honor, “M’TACHAS KISE HAKOVOD.” Charity must be given with honor, with dignity, to help rehabilitate with self-respect and dignity.
+
+Our sages tell us “MITKASHEH MOSHE B’MACHTZIT HASHEKEL”; it puzzled Moses, that half of a shekel. He did not understand the meaning and form of the offering till God showed it to him in the form of a fiery coin and said: “KAZEH YITNU,” “like this they shall give.” This is to teach us that even with such a wonderful trait as “TZEDAKAH,” charity, we must have God’s guidance to do it righteously.

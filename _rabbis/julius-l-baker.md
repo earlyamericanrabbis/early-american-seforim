@@ -7,8 +7,9 @@ born:
 birthplace:
 died:
 deathplace:
-positions: []
-communities: []
+positions:
+  - "Rabbi, Congregation Ahavas Sholom, Columbus, Ohio"
+communities: ["Columbus, OH"]
 burial:
 burial_plot:
 portrait:

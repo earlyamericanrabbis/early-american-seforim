@@ -1,0 +1,33 @@
+---
+title: "Passover, Last Day"
+hebrew_title:
+book: "pri-yehudah"
+order: 55
+parsha:
+moed: "Pesach"
+occasion: ["Last Day of Pesach"]
+subjects: ["Shabbos", "Mourning & Remembrance"]
+---
+“L’MAAN TIZKOR ET YOM TZEISCHA M’ERETZ MITZRAYIM KOL YEMEI CHAYECHA,” “So you may remember the day of your exodus from Egypt through all the days of your life” (Deuteronomy 16:3).
+
+One of the paramount traits of man is memory. Memory plays a most significant role in man’s progress. When men do not forget that which was previously discovered, they can progress and widen the creativeness that preceded them. “DOR V’DOR Y’SHABACH MAASECHA,” “Each generation improves that which was already created” (Psalm 145:4).
+
+In man’s relationship with his fellowman, memory is of utmost significance. One must never forget a favor performed on his behalf. He must not forget an obligation or debt to others. He should not forget a promise given even to a child. He must remember his origin, particularly when he can be proud of his ancestors. He must remember at all times his position and status in life and adjust himself to it.
+
+The Torah points constantly to “ZACHOR,” “Remember,” and “LEMAAN TIZKOR,” “That you may remember.” Also, the custom of “YISKOR,” the memorial to the souls of the departed, was given as a means of re-awakening, reminding, and keeping our memory alive.
+
+The Torah commands us “V’ZACHARTA KI EVED HAYITA B’ERETZ MITZRAYIM,” “Remember that ye were slaves in Egypt” (Deuteronomy 5:15). This is of great importance! Men spend most of their lives trying to achieve that which we call “MENUCHAT HANEPHESH,” “Peace of mind.” The Bible decreed: “In the sweat of thy face shalt thou eat bread” (Genesis 3:19), and since the beginning of existence, man is looking for ways and means to lighten that burden. In the pursuit for an improvement in his condition, he does not stop to think that many a time the sought-after goal is achieved at the expense of others. There are many people who do not truly enjoy “MENUCHAT HANEPHESH,” “peace of mind,” unless others toil and labor for them. These are very selfish ones who do not care how much suffering they cause to their fellowmen in the attainment of their desires. We are told in the Bible: “L’MAAN YONUACH AVDECHA V’AMASCHA KAMOCHA,” “That your servant shall rest even as you do.” This pronouncement in connection with the Sabbath is most significant. The Sabbath is not only a day for rest, but also a day of sanctity of holiness, as it is said: “YOM MENUCHAH UKDUSHAH,” “A day of rest and holiness” (Sages). Not only must we rest, but we must also preserve the sanctity of our people. That can be realized when the rest, relaxation, is collective, not only for the selective few, but is within the possession of all.
+
+It is in the nature of some people to deem themselves wiser than their fellowmen. This vanity is a disease that has afflicted many and is responsible for the whole concept of suppression and enslavement of others. When the practice of deceit and thievery are called accomplishments, and when they afford one a false sense of security, then there ensues a struggle between one man and another, and on a larger scale, is one of the great causes for strife between nations. The aim of our Torah, through the laws of the Sabbath and the other commandments, is to uproot this ugly, despicable trait of vanity and egoism. The function of the Sabbath is to make everyone equal. All must rest — “KOMOCHO,” “like you.” You, the master, are no better than the one who works for you.
+
+The Torah understood that it would be difficult for a man who achieved material greatness in life to comprehend that he is no better than the one who works for him. This is demonstrated with the proclamation “VEZOCHARTO KI EVED HAYITA B’ERETZ MITZRAYIM,” “Remember that you were slaves in the land of Egypt.” The Torah desires to uproot this sort of ego from the people by reminding the master that he too was once a slave.
+
+The whole incident of bondage and exodus from Egypt was ordained by God that the people of Israel, whom God has chosen to be the light for the nations, might carry with them the key to world peace. The first preparation for the exodus from Egypt was the commandment of the Sabbath which proclaims equality for all. The long march in the desert helped to accomplish the same. Korah, the Torah tells us, felt that Moses and Aaron were taking too much prominence, honor and power to themselves and though he was completely unjustified, nevertheless, the argument that he raised was one that supported the concept of equality when he said, “All the people are sacred and holy” (Numbers 16:3).
+
+When the people of Israel crossed the Red Sea, the Midrash tells us, they walked through channels separated by transparent walls of the sea, and as they crossed, they were able to see each other. They realized then, by seeing each other and sharing each other’s fate, that this was the condition without which they would not attain their full freedom. So the Torah drives home this lesson, that we may not forget that man’s own security depends upon the security of his fellowman. We are all engaged in building a better world for ourselves and our children, and though each of us is carrying out a different task, the goal is the same.
+
+The time-honored custom of “HAZKARAT NESHAMOT,” “Memorial Service,” was also established as a means of uniting our work with that which was achieved before us. In this way, we establish a continuity of that mystical power of eternal Israel which marches to the hopeful future. The secret of Israel’s eternity lies in his creativeness. We are not satisfied with what we received from the past generations but must try to add our own accomplishments. Where the previous generation ended, we begin with further development.
+
+Victor Hugo, the great French author said: “. . . that the tragedy of our time is that everything begins and ends with things that are materialistic, with things of the world.” When that which is earthly is placed as the pinnacle of the highest goal to be achieved by man, the task makes his life unbearably difficult. We must elevate the faces of mankind to heaven, to God, and to belief in the reward of life.
+
+We conclude the YISKOR prayer with these words: “VEYITZROR BETZROR HACHAIM ET NISHMATAM,” “Let Him bind up their souls in the bond of eternal life.” With this prayer we demonstrate our deep and unshakable belief in the immortality of the soul, in a life after death. This belief gives us the courage to maintain the age-old continuity until the ultimate redemption which God will give to all mankind. Amen.

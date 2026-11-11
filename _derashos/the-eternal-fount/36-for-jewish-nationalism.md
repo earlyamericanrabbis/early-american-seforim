@@ -1,0 +1,50 @@
+---
+title: "For Jewish Nationalism"
+hebrew_title: "קרח"
+book: "the-eternal-fount"
+order: 36
+parsha: "Korach"
+moed:
+occasion:
+verses: "Numbers xvi-xviii"
+subjects:
+---
+<span dir="rtl">ויקח קרח... חמשים ומאתים נשיאי עדה... ויקהלו על-משה ועל-אהרן</span> “And Korach took (his followers). . . two hundred and fifty princes of the congregation. . . . And they were assembled against Moses, and against Aaron.” In this and the portion preceding, remark our talmudic and aggadic sages, is represented the historical conflict conducted in all lands and climes by the wealthy “princes of the congregation” against the common people and the Jewish national ideal. The attitude of our assimilators, whether in Berlin, Paris, or London, that each of these capitals is to become our Jerusalem, and that each country of our sojourn can be designated our Zion, was anciently expressed in the declaration of the “Asafsuf” in the days of Moses — <span dir="rtl">הלא טוב לנו שוב מצרימה</span> “Is it not better that we return to Egypt!”
+
+The “men of name” in the wilderness, even to the powerful householders of the present era, have always feared lest the Jewish striving for national independence might undermine their economic and political fundament in the lands of their habitation. Thus did Korach and his followers rebuke Moses: <span dir="rtl">המעט כי העליתנו מארץ זבת חלב ודבש</span> “Is it a small thing that thou hast brought us up out of the land flowing with milk and honey?” (xvi, 13). The fact of exile appeared no concern of theirs, nor did the bondage of their people disturb them, so long as they might be assured of their own “pot of flesh.” That their nation might be generally accounted as parasites and nomads was to them no problem.
+
+Whenever a movement has been instituted to recreate a Jewish homeland in the land of our fathers, the Moseses, the leaders, have been assailed by the same plaint as was long ago raised by Korach and his coterie: <span dir="rtl">אף לא אל-ארץ זבת חלב ודבש הביאתנו</span> “Neither hast thou brought us into a land flowing with milk and honey.” Whereunto wilt thou lead us? To a tiny waste territory, where one must labor in hardship for one’s bread. The inevitable refusal follows — <span dir="rtl">לא נעלה</span> “We will not come up” (14).
+
+To obliterate all nationalist sentiment in the hearts of youth, “reform” of Israel’s faith is instituted. The home is divested of its dietary observances; in the world at large Jewish life is not distinguishable from that of the gentiles; Jewish places of worship adopt alien customs, obviously imitated from the manners of the non-Jewish environment. The chief intent of these derelictions is that through honor given the culture and spirit of our neighbors, these groups will at once accept us as brethren, and we shall no longer be constrained to strive for our own land, our own domicile.
+
+This leading motive is ascribed by the sages to Korach and his band. Rebelling against any nationalist motive, they remained perturbed by the failure of the spies to carry out their plot against the establishment of a land of Israel. They were not dissuaded by the fact that their treachery had brought great grief to the people in the form of a pestilence. They must in despite make an onslaught on Jewish Law and the Jewish faith. “And they were assembled against Moses, and against Aaron.” It was quite clear to them that so long as the populace followed their leaders, they could not be assimilated, and would cling to the triune principle of “the people of Israel, the Torah of Israel, and the land of Israel.”
+
+Concerning all those statutes not explicitly declared in the Ten Commandments, they exclaimed to Moses even as do today’s Reformists:
+
+<span dir="rtl">דברים אלו לא נצטוית עליהן ומלבך אתה בודאן</span> “These matters were not commanded unto you by God; out of your own heart have you devised them” (Tanhuma). Generations later, when the descendants of Korach, suffering in anti-Semitic, purgatorial lands, discovered that the ancestral teaching of assimilation was of no avail to them, the famed Rabbi bar bar Hannah heard their cry:
+
+<span dir="rtl">משה אמת ותורתו אמת והם בדאין</span> “Moses spake truth, and his Torah is truth, but these others are guilty of falsehood” (Sanhedrin 110).
+
+The Yalkut Shimeoni relates that at the protest meeting organized by Korach, he loudly denounced the Law, and Moses and Aaron, the upholders thereof. “Hear ye!” he cried. “Near me sojourned a widow with her two orphaned daughters. Her husband had bequeathed her a field. But when she sought to plough the field, she was confronted by the ordinance of Moses, <span dir="rtl">לא תחרוש שור וחמור יחדיו</span> “Thou shalt not plough with ox and ass together.” Then, when there came time for sowing, she was ordered, <span dir="rtl">שדך לא תזרע כלאים</span> “Thou shalt not sow thy field with mixed seeds.” When there is reaping to be done, comes the command to leave on the field the produce that remains or is forgotten or is untouched in the corners <span dir="rtl">לקט שכחה פאה</span>. And when the meager harvest is gathered up and is ready to be stored, there is the demand for separation of the various tithes.
+
+“At length the poor widow, seeing that she could gain nothing from her husbandry, sold the field and purchased sheep, which would provide milk and wool. But when the first lambs were born, she was informed that all ‘firstlings belong unto Me.’ When it came time to shear the animals, Aaron again appeared, to proclaim, <span dir="rtl">כך אמר הקב</span>”<span dir="rtl">ה, ראשית גז צאנך תתן לי</span> ‘Thus saith the Holy One blessed be He, The first of the shearing of thy sheep shalt thou give unto Me.’ Thus embittered and oppressed by the importunities of this man, the widow determined to slaughter the sheep and eat of their flesh.
+
+“But no sooner had the slaughtering been completed than Aaron returned to demand the forelegs, cheeks, and maws — <span dir="rtl">זרוע לחיים קיבה</span>. Upon this the woman exclaimed, ‘Then I pronounce a ban <span dir="rtl">חרם</span> upon this flesh; let no one have use of it!’ Thereupon Aaron responded, ‘Now all belongs to me, for the law declares, <span dir="rtl">כל חרם בישראל לך יהיה</span> meaning that everything banned and thus devoted to the Eternal must be given to the priest.’ ”
+
+Then Korach cried out: <span dir="rtl">כדין כולהון עבדין להא עלובתא ותולין בהקב</span>”<span dir="rtl">ה</span> “And thus did these two (Moses and Aaron) do unto this unfortunate woman, and all in the name of God!”
+
+## The Jewish Future
+
+<span dir="rtl">מרגלים ועדת קרח אין להם חלק לעולם הבא</span> “The spies and the congregation of Korach have no share in the world to come” (Sanhedrin 109). Not to them belongs the Jewish future, Jewish immortality. Insomuch as they have rejected the Jewish past, the fathers and the land of the fathers, they live only in the present; and a today without a yesterday has no tomorrow. One can plant produce for one’s own future only in the soil of one’s own past. Those without desire to have a Jewish future, refuse to reckon with the Judaism of days agone. When Jacob prophesied concerning his children “in the latter days,” he prayed to the Lord, <span dir="rtl">לא יחד שמי במרגלים, ולא במחלוקת קרח ועדתו</span> “Let not my name be included with those of the spies and the congregation of Korach” (Numbers Rabbah).
+
+Thus did God speak unto Moses: <span dir="rtl">דבר אל העדה</span>—<span dir="rtl">העלו מסביב למשכן קרח</span> “Speak unto the congregation. . . . Get you up from about the dwelling of Korach” (24). They had fallen grievously low and required uplifting. For these rebels were <span dir="rtl">חטאים בנפשותם</span> “sinners to their very souls”; <span dir="rtl">שנשמתם נשרפת וגופם קים</span> “for their souls are consumed by fire, though their bodies remain” (Sanhedrin 52a). Their theory of life was impossibly altruistic, and built upon a shifting and unstable materialist basis. The end of such men is always <span dir="rtl">וירדו חיים שאלה</span> “They go down alive into the grave” (30). For they quickly disappear in the process of assimilation.
+
+Jews who establish themselves so firmly in the life of strange lands and thereby forget their God, their Law, their people, and their land, are ultimately obliterated, with all their goods.
+
+<span dir="rtl">ותפתח הארץ את-פיה ותבלע אתם ואת-בתיהם... ואת כל-הרכוש</span> “And the earth opened her mouth, and swallowed them up, and their houses. . . . and all their substance” (32). <span dir="rtl">ותכם עליהם הארץ ויאבדו מתוך הקהל</span> “And the earth (their new land) covered them; and they perished from among the congregation” (33).
+
+Recall the reply of Moses to Korach: <span dir="rtl">לא חמור אחד מהם נשאתי</span> “I have not taken one ass from them” (15). He had received no payment for any of his services to the people. An appropriate story is related in this connection by B. Joasohn:
+
+“There came to Rabbi Israel Rizhiner a this-worldly apostle of ‘enlightenment’ to ask, ‘Pray tell me, Rabbi, why former rabbis lived in need and difficulty, residing in wooden huts, wearing homespun garments, and traveling afoot; while present rabbis live in palaces, dress magnificently, and travel in carriages!’
+
+“To this query Rizhiner replied: ‘I shall tell you. A rabbi has three sorts of visitors — men of piety, householders, and transgressors. The redemption money they leave with him is distributed in keeping with the character of the givers. That which comes from the pious is employed for sacred duties, for fringes, phylacteries, citrons, alms, and similar ritual and social purposes. That received from householders is used for personal support. But the money given by sinners is devoted to special purposes, such as the luxuries of horses and carriages. In former years, when there were but few sinners, the rabbis went afoot, since they had no funds wherewith to purchase horses. But now that there are so many transgressors, there are plentiful funds to provide the rabbis with a sufficiency of draft animals and conveyances.’ ”
