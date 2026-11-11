@@ -321,10 +321,10 @@ figcaption { font-size: .8rem; color: var(--ink-soft); font-style: italic; }
 /* Substack sign-up bar */
 .signup { background: var(--paper-2); border-top: 4px solid var(--gold); margin-top: 3rem; }
 .signup-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; padding-top: 1.4rem; padding-bottom: 1.4rem; }
-.signup-text { flex: 1 1 22rem; }
+.signup-text { flex: 1 1 18rem; min-width: 0; }
 .signup-text h2 { border: 0; margin: 0 0 .2rem; padding: 0; font-size: 1.35rem; }
 .signup-text p { margin: 0; color: var(--ink-soft); font-size: .95rem; }
-.signup-form { display: flex; flex: 1 1 20rem; gap: .5rem; }
+.signup-form { display: flex; flex: 1 1 16rem; min-width: 0; max-width: 100%; gap: .5rem; }
 .signup-form input { flex: 1; min-width: 0; font: inherit; font-size: 1rem; padding: .55rem .8rem; border: 2px solid var(--gold); border-radius: 4px; background: #fffaf0; }
 .signup-form .btn { cursor: pointer; font-family: inherit; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
@@ -338,3 +338,15 @@ figcaption { font-size: .8rem; color: var(--ink-soft); font-style: italic; }
 .media-item p { margin: .3rem 0 0; }
 .media-video { position: relative; padding-top: 56.25%; margin-top: .6rem; }
 .media-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 4px; }
+
+/* Phones: stacked sign-up form, icon buttons in the footer */
+@media (max-width: 600px) {
+  .signup-form { flex-direction: column; flex-basis: 100%; }
+  .signup-form .btn { width: 100%; padding: .65rem; }
+  .footer-follow { flex-direction: column; align-items: flex-start; gap: .5rem; }
+  .social-labels { gap: .6rem; }
+  .social-labels a { width: 2.6rem; height: 2.6rem; justify-content: center; border: 1px solid var(--rule); border-radius: 50%; background: #fffaf0; }
+  .social-labels a span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .social-labels svg { width: 1.25rem; height: 1.25rem; }
+  .site-header .social { gap: 1.1rem; }
+}
