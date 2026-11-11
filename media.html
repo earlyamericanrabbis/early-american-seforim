@@ -1,0 +1,33 @@
+---
+title: In the Media
+permalink: /media/
+---
+<h1>In the Media</h1>
+<p class="lede">Podcast conversations, articles and videos about the Early American Rabbis project.</p>
+
+{%- assign items = site.data.media | sort: "date" | reverse -%}
+{%- if items.size == 0 -%}
+<p class="meta">Podcast appearances and articles will be listed here soon. To hear about them first, follow along on {% for s in site.social %}<a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>{% unless forloop.last %}{% if forloop.rindex == 2 %} or {% else %}, {% endif %}{% endunless %}{% endfor %}.</p>
+{%- else -%}
+{%- assign groups = "podcast:Podcasts,article:Articles,video:Videos" | split: "," -%}
+{%- for g in groups -%}
+  {%- assign parts = g | split: ":" -%}
+  {%- assign list = items | where: "type", parts[0] -%}
+  {%- if list.size > 0 %}
+<h2>{{ parts[1] }}</h2>
+<ul class="media-list">
+  {%- for m in list %}
+  <li class="media-item">
+    <span class="media-kind">{% include social-icon.html icon=m.type %}</span>
+    <div>
+      <a class="media-title" href="{{ m.url }}" target="_blank" rel="noopener">{{ m.title }}</a>
+      <div class="meta">{{ m.outlet }}{% if m.date %} · {{ m.date | date: "%B %-d, %Y" }}{% endif %}</div>
+      {% if m.summary %}<p>{{ m.summary }}</p>{% endif %}
+      {% if m.youtube %}<div class="media-video"><iframe src="https://www.youtube-nocookie.com/embed/{{ m.youtube }}" title="{{ m.title | escape }}" loading="lazy" allowfullscreen></iframe></div>{% endif %}
+    </div>
+  </li>
+  {%- endfor %}
+</ul>
+  {%- endif -%}
+{%- endfor -%}
+{%- endif -%}

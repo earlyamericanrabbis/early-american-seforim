@@ -106,3 +106,6 @@ The home page shows every rabbi with his portrait. To feature a rabbi large at t
 ## If something looks wrong
 
 Open the **Actions** tab on GitHub. A red ✗ means the last change had a problem, usually a missing `---` or a colon that needs quotation marks. Fix the file and commit again.
+
+## In the Media
+Podcast appearances, articles and videos are listed in `_data/media.yml` (one entry each: type, title, outlet, date, url, and optionally summary and a YouTube video ID). The page lives at `/media/`; the "In the Media" menu link appears once the first entry is added.

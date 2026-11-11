@@ -29,6 +29,7 @@
         <a href="{{ '/parshiyos/' | relative_url }}">Parshiyos</a>
         <a href="{{ '/moadim/' | relative_url }}">Moadim</a>
         <a href="{{ '/subjects/' | relative_url }}">Subjects</a>
+        {% if site.data.media.size > 0 %}<a href="{{ '/media/' | relative_url }}">In the Media</a>{% endif %}
         <a href="{{ '/search/' | relative_url }}">Search</a>
       </nav>
       </div>
@@ -44,7 +45,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-follow"><span>Follow along:</span>{% include social-links.html labels=true %}</div>
-      <p>{{ site.title }} · <a href="{{ '/rabbis/' | relative_url }}">Rabbis</a> · <a href="{{ '/print/' | relative_url }}">Print Editions</a> · <a href="{{ '/books/' | relative_url }}">Library</a> · <a href="{{ '/derashos/' | relative_url }}">Every Derasha</a></p>
+      <p>{{ site.title }} · <a href="{{ '/rabbis/' | relative_url }}">Rabbis</a> · <a href="{{ '/print/' | relative_url }}">Print Editions</a> · <a href="{{ '/books/' | relative_url }}">Library</a> · <a href="{{ '/derashos/' | relative_url }}">Every Derasha</a> · <a href="{{ '/media/' | relative_url }}">In the Media</a></p>
     </div>
   </footer>
 </body>
