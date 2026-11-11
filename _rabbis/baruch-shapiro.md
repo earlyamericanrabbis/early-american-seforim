@@ -32,6 +32,9 @@ semicha:
 portrait: /assets/images/rabbis/baruch-shapiro.jpg
 sources:
 - 'Photographs: University of Washington Libraries, Special Collections Division'
+gallery:
+- image: /assets/images/rabbis/baruch-shapiro-2.jpg
+  caption: Rabbi Shapiro on the street (University of Washington Libraries, Special Collections)
 status: draft
 sheet_row: 947
 ---
