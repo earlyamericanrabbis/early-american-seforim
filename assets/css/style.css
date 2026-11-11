@@ -350,3 +350,10 @@ figcaption { font-size: .8rem; color: var(--ink-soft); font-style: italic; }
   .social-labels svg { width: 1.25rem; height: 1.25rem; }
   .site-header .social { gap: 1.1rem; }
 }
+
+/* Dedication above the home page title */
+.dedication { display: inline-block; margin: 0 auto .4rem; padding: .25rem 1.1rem; border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); color: var(--ink-soft); font-size: .95rem; font-style: italic; line-height: 1.7; }
+.dedication .he { font-style: normal; font-size: 1.12em; color: var(--ink); }
+.hero .dedication + h1 { margin-top: .5rem; }
+.ded-part { white-space: nowrap; display: inline-block; }
+@media (max-width: 600px) { .dedication { display: block; } .ded-part { display: block; } .ded-comma { display: none; } }
