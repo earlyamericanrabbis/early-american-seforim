@@ -1,0 +1,17 @@
+# The Moadim, in calendar order. A derasha's "moed:" must match a "name" here exactly.
+- { name: "Elul", hebrew: "אלול" }
+- { name: "Rosh Hashana", hebrew: "ראש השנה" }
+- { name: "Shabbos Shuva", hebrew: "שבת שובה" }
+- { name: "Yom Kippur", hebrew: "יום כיפור" }
+- { name: "Sukkos", hebrew: "סוכות" }
+- { name: "Shemini Atzeres & Simchas Torah", hebrew: "שמיני עצרת ושמחת תורה" }
+- { name: "Chanukah", hebrew: "חנוכה" }
+- { name: "Asarah B'Teves", hebrew: "עשרה בטבת" }
+- { name: "Tu B'Shvat", hebrew: "ט״ו בשבט" }
+- { name: "Purim", hebrew: "פורים" }
+- { name: "Shabbos HaGadol", hebrew: "שבת הגדול" }
+- { name: "Pesach", hebrew: "פסח" }
+- { name: "Sefiras HaOmer", hebrew: "ספירת העומר" }
+- { name: "Shavuos", hebrew: "שבועות" }
+- { name: "Shiva Asar B'Tammuz & the Three Weeks", hebrew: "שבעה עשר בתמוז ובין המצרים" }
+- { name: "Tisha B'Av", hebrew: "תשעה באב" }
