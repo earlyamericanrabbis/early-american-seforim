@@ -1,5 +1,5 @@
 ---
-name: Rabbi Moshe Shmuel Rottenburg
+name: Rabbi Moshe Shmuel Rottenberg
 first_name: Moshe Shmuel
 last_name: Rottenberg
 short_name: ''
