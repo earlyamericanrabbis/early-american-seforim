@@ -1,9 +1,10 @@
 ---
 name: Rabbi Shmuel Yitzchak Katz
-short_name: Rabbi Katz
-sort_name: Katz, Shmuel Yitzchak
 first_name: Shmuel Yitzchak
 last_name: Katz
+short_name: Rabbi Katz
+sort_name: Katz, Shmuel Yitzchak
+also_known_as: []
 hebrew_name: שמואל אייזיק ב"ר חיים דוב הכהן
 born: '1872'
 born_year: 1872
@@ -17,18 +18,25 @@ yahrzeit_day: 7
 yahrzeit_month: Av
 yahrzeit_month_num: 11
 burial: Sharei Tefila Cemetery, Indianapolis, IN
+burial_plot: ''
 states:
-- IN
-- NY
+  - IN
+  - NY
 communities:
-- Anshie Kutno (Bronx)
+  - The Bronx, NY
+  - Indianapolis, IN
+positions:
+  - Rav
 yeshivos:
-- Kovno
-sources:
-- 'Instagram: @earlyamericanrabbis'
+  - Kovno
+semicha: []
+works: []
 portrait: /assets/images/rabbis/shmuel-yitzchak-katz.jpg
+gallery: []
+sources:
+  - 'Instagram: @earlyamericanrabbis'
+featured: false
 status: draft
 sheet_row: 395
+seforim: []
 ---
-
-Rabbi Shmuel Yitzchak Katz, 1872-1949. Served as Rav in Indianapolis, IN. Learned in Kovno.
