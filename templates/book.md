@@ -12,7 +12,8 @@ translator:                       # optional
 cover:                            # optional, e.g. /assets/images/covers/pri-yehudah.jpg
 status: In progress               # anything you like: In progress, Published, Reprint in preparation...
 # ---- Print edition (Amazon KDP) ----
-in_print: true                    # false = leave it off the Print Editions page
+online: true                      # false = print-only, no text in the online library
+in_print: true                    # true = show on the Print Editions page; false (or missing) = hide it
 amazon:                           # paste the Amazon link here
 price:                            # e.g. "$24.99"
 format: Paperback                 # Paperback, Hardcover, ...

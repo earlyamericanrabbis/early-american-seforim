@@ -2,7 +2,7 @@
 layout: default
 ---
 {%- assign portrait = page.portrait | default: '/assets/images/portrait-placeholder.svg' -%}
-{%- assign books = site.books | where: "rabbi", page.slug | sort: "year" -%}
+{%- assign books = site.books | where: "rabbi", page.slug | where_exp: "b", "b.online != false" | sort: "year" -%}
 {%- assign by = page.born_year | default: page.born -%}
 {%- assign dy = page.died_year | default: page.died -%}
 {%- assign bio_text = content | strip_html | strip -%}
@@ -91,8 +91,8 @@ layout: default
     {% endif %}
   </div>
 
-  {%- assign print_books = site.books | where: "rabbi", page.slug | where_exp: "b", "b.in_print != false" -%}
-  {%- assign anths = site.books | where: "anthology", true | where_exp: "b", "b.in_print != false" -%}
+  {%- assign print_books = site.books | where: "rabbi", page.slug | where_exp: "b", "b.in_print == true" -%}
+  {%- assign anths = site.books | where: "anthology", true | where_exp: "b", "b.in_print == true" -%}
   {%- for a in anths -%}
     {%- assign mine = site.derashos | where: "book", a.slug | where: "rabbi", page.slug | size -%}
     {%- if mine > 0 -%}{%- assign print_books = print_books | push: a -%}{%- endif -%}

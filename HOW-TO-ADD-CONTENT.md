@@ -70,7 +70,9 @@ blurb: One or two sentences for the Print Editions page.
 
 - When the `amazon:` line is empty, the book shows **Coming soon to Amazon**.
 - When you paste a link there, it shows a **Buy on Amazon** button, on the Print Editions page, on the book's page, and on each rabbi's page under "Available in print".
-- `in_print: false` takes a book off the Print Editions page entirely.
+- **Only books with `in_print: true` appear on the Print Editions page.** `in_print: false` (or leaving the line out) keeps a book off it, and off the rabbi's "Available in Print" list. The book stays in the online library either way.
+- **A published book whose text isn't on the site yet** can still be listed for sale: give it a file with `online: false`. It appears on Print Editions (and its own page with the Buy button) but not in the Library.
+- The easiest way to do all of this is the form editor at `/admin/` → **Books**: each book has a "Show on the Print Editions page" switch, and **New Book** adds a published book with just a title, cover and Amazon link.
 - For a book cover, upload the image to `assets/images/covers/` and set `cover: /assets/images/covers/the-file-name.jpg`.
 
 *Chazon Yeshayahu* and the *Book of Sermons* point to *Kisvei Rav Yeshayahu Glazer*, since they're printed as part of it. Put the Amazon link on the *Kisvei* file.

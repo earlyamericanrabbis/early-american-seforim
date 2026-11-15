@@ -12,6 +12,7 @@ translator:
 cover:
 status: Published
 # ---- Print edition (Amazon KDP) ----
+online: true                      # false = print-only, no text in the online library
 in_print: true                    # false = leave it off the Print Editions page
 amazon:                           # paste the Amazon link here
 price:                            # e.g. "$24.99"

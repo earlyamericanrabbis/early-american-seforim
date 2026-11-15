@@ -9,6 +9,7 @@ translator:
 cover:
 status: Published
 # ---- Print edition (Amazon KDP) ----
+online: true                      # false = print-only, no text in the online library
 in_print: false                   # printed as part of the collected volume below
 print_in: kisvei-rav-yeshayahu-glazer
 ---

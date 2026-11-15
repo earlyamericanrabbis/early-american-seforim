@@ -2,7 +2,7 @@
 title: Home
 ---
 {%- assign n_rabbis = site.rabbis | size -%}
-{%- assign n_books = site.books | size -%}
+{%- assign n_books = site.books | where_exp: "b", "b.online != false" | size -%}
 {%- assign n_derashos = site.derashos | size -%}
 {%- assign rabbis_sorted = site.rabbis | sort: "sort_name" -%}
 {%- assign with_portrait = rabbis_sorted | where_exp: "r", "r.portrait" -%}
@@ -65,7 +65,7 @@ title: Home
   </div>
 </section>
 
-{%- assign printed = site.books | where_exp: "b", "b.in_print != false" -%}
+{%- assign printed = site.books | where_exp: "b", "b.in_print == true" -%}
 {%- assign ready = printed | where_exp: "b", "b.amazon" | sort: "title" -%}
 {%- assign soon = printed | where_exp: "b", "b.amazon == nil" | sort: "title" -%}
 {%- assign shelf = ready | concat: soon -%}

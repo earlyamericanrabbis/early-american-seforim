@@ -262,6 +262,150 @@ collections:
     label: Biography
     widget: markdown
     required: false
+- name: books
+  label: Books
+  label_singular: Book
+  folder: _books
+  create: true
+  extension: md
+  format: frontmatter
+  slug: '{{title}}'
+  identifier_field: title
+  summary: '{{title}}'
+  media_folder: /assets/images/covers
+  public_folder: /assets/images/covers
+  sortable_fields:
+  - title
+  - year
+  view_filters:
+  - label: On the Print Editions page
+    field: in_print
+    pattern: true
+  - label: Not on the Print Editions page
+    field: in_print
+    pattern: false
+  - label: Print-only (no online text)
+    field: online
+    pattern: false
+  fields:
+  - name: title
+    label: Title
+    widget: string
+  - name: in_print
+    label: Show on the Print Editions page
+    widget: boolean
+    default: true
+    hint: Turn off to keep this book off the Print Editions page (and off the rabbi's "Available in Print" list). The book stays in the online library.
+  - name: amazon
+    label: Amazon link
+    widget: string
+    required: false
+    hint: With a link the book shows "Buy on Amazon"; without one it shows "Coming soon to Amazon".
+  - name: cover
+    label: Cover image
+    widget: image
+    required: false
+  - name: price
+    label: Price
+    widget: string
+    required: false
+    hint: e.g. $24.99
+  - name: format
+    label: Format
+    widget: string
+    required: false
+    hint: Paperback, Hardcover...
+  - name: pages
+    label: Number of pages
+    widget: string
+    required: false
+  - name: isbn
+    label: ISBN
+    widget: string
+    required: false
+  - name: blurb
+    label: Blurb for the Print Editions page
+    widget: text
+    required: false
+    hint: One or two sentences
+  - name: online
+    label: Text is in the online library
+    widget: boolean
+    default: false
+    hint: Leave off for a book that is only listed for sale (its text hasn't been put on the site). Claude turns this on when the derashos are uploaded.
+  - name: subtitle
+    label: Subtitle
+    widget: string
+    required: false
+  - name: hebrew_title
+    label: Hebrew title
+    widget: string
+    required: false
+  - name: rabbi
+    label: Rabbi
+    widget: relation
+    collection: rabbis
+    value_field: '{{slug}}'
+    search_fields: [name, also_known_as]
+    display_fields: [name]
+    required: false
+    hint: Leave blank for an anthology of many rabbis
+  - name: anthology
+    label: Anthology of many rabbis
+    widget: boolean
+    required: false
+  - name: collected
+    label: Collected edition of several books
+    widget: boolean
+    required: false
+  - name: volumes
+    label: Books in this collected edition
+    widget: relation
+    collection: books
+    value_field: '{{slug}}'
+    search_fields: [title]
+    display_fields: [title]
+    multiple: true
+    required: false
+  - name: print_in
+    label: Printed as part of
+    widget: relation
+    collection: books
+    value_field: '{{slug}}'
+    search_fields: [title]
+    display_fields: [title]
+    required: false
+    hint: For a book that is only sold inside a collected edition (then turn off "Show on the Print Editions page")
+  - name: moed
+    label: Yom Tov (Moadim in America)
+    widget: string
+    required: false
+  - name: printed
+    label: First printed (city, year)
+    widget: string
+    required: false
+  - name: year
+    label: Year first printed
+    widget: number
+    value_type: int
+    required: false
+  - name: editor
+    label: Editor
+    widget: string
+    required: false
+  - name: translator
+    label: Translator
+    widget: string
+    required: false
+  - name: status
+    label: Status note
+    widget: string
+    required: false
+    hint: e.g. Published, In progress, Reprint in preparation
+  - name: body
+    label: Introduction
+    widget: markdown
+    required: false
 - name: site_data
   label: In the Media
   files:

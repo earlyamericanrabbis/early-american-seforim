@@ -5,7 +5,7 @@ permalink: /print/
 <h1>Print Editions</h1>
 <p class="lede">Every sefer in the Early American Rabbis series is available in print through Amazon.</p>
 
-{%- assign printed = site.books | where_exp: "b", "b.in_print != false" -%}
+{%- assign printed = site.books | where_exp: "b", "b.in_print == true" -%}
 {%- assign ready = printed | where_exp: "b", "b.amazon" | sort: "title" -%}
 {%- assign soon = printed | where_exp: "b", "b.amazon == nil" | sort: "title" -%}
 

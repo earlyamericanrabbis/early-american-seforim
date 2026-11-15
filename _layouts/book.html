@@ -23,7 +23,7 @@ layout: default
     </div>
   </div>
 
-  {% if page.in_print != false %}
+  {% if page.in_print == true %}
   <aside class="print-box">
     <div>
       <strong>Print edition</strong>
@@ -51,7 +51,9 @@ layout: default
   </section>
   {% endunless %}
 
-  {% if page.volumes %}
+  {% if page.online == false %}
+  {%- comment -%} Print-only book: no text in the online library {%- endcomment -%}
+  {% elsif page.volumes %}
   <h2>In this volume</h2>
   <ol class="toc">
     {% for s in page.volumes %}
