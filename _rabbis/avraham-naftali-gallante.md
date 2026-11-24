@@ -34,7 +34,13 @@ works:
   - Moadim l'Simcha
   - Mashal uMelitza al haTorah
 portrait: /assets/images/rabbis/avraham-naftali-gallante.jpg
-gallery: []
+gallery:
+  - image: /assets/images/rabbis/81460470_186ea9f7-5596-4956-9c15-96b31b0fe2f3.jpeg
+    caption: ''
+  - image: /assets/images/rabbis/81460470_d8cc1ca4-9ff6-4e31-a039-f2cf9a110026.jpeg
+    caption: ''
+  - image: /assets/images/rabbis/81460470_bab2b5dd-d44e-48d7-b02e-2e8c3c004126.jpeg
+    caption: ''
 sources:
   - 'Instagram: @earlyamericanrabbis'
 featured: false
