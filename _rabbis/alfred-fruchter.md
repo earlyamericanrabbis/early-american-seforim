@@ -6,7 +6,7 @@ short_name: Rabbi Fruchter
 sort_name: Fruchter, Alfred
 also_known_as:
   - Elvis' Rabbi
-hebrew_name: ''
+hebrew_name: אליהו אפרים בן יוסף ארי
 born: March 26, 1915
 born_year: 1915
 birthplace: Chicago, IL
